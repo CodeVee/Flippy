@@ -76,7 +76,8 @@
                         Grid.Column="1"
                         BackgroundColor="Transparent"
                         Padding="0"
-                        HorizontalOptions="End"/>
+                        HorizontalOptions="End"
+                        Clicked="ForgotButton_Clicked"/>
             </Grid>
         </VerticalStackLayout>
         <Button Text="Login" 

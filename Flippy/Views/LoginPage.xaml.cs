@@ -16,4 +16,9 @@ public partial class LoginPage : ContentPage
     {
 		await Shell.Current.GoToAsync($"{nameof(RegisterPage)}");
     }
+
+    private async void ForgotButton_Clicked(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync($"{nameof(ForgotPasswordPage)}");
+    }
 }
