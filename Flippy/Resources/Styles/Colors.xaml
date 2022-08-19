@@ -5,7 +5,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
     <Color x:Key="AppGreen">#56D5A8</Color>
-    <Color x:Key="DeepBlue">#56D5A8</Color>
+    <Color x:Key="DeepBlue">#273773</Color>
     <Color x:Key="Background">White</Color>
     <Color x:Key="DarkGrey">#5B5B5B</Color>
     <Color x:Key="DarkBlue">#111111</Color>

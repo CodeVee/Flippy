@@ -6,7 +6,6 @@
 
     <Style TargetType="Label" x:Key="BaseLabel">
         <Setter Property="FontFamily" Value="LatoRegular" />
-        
     </Style>
 
     <Style x:Key="DarkLabel" BasedOn="{StaticResource BaseLabel}" TargetType="Label">
@@ -15,6 +14,24 @@
 
     <Style x:Key="GreyLabel" BasedOn="{StaticResource BaseLabel}" TargetType="Label">
         <Setter Property="TextColor" Value="{StaticResource DarkGrey}" />
+    </Style>
+
+    <Style x:Key="BaseButton" TargetType="Button">
+        <Setter Property="HeightRequest" Value="50" />
+        <Setter Property="WidthRequest" Value="274" />
+        <Setter Property="CornerRadius" Value="25" />
+        <Setter Property="FontFamily" Value="LatoRegular" />
+        <Setter Property="FontSize" Value="16" />
+    </Style>
+
+    <Style x:Key="LightButton" BasedOn="{StaticResource BaseButton}" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="{StaticResource DeepBlue}" />
+        <Setter Property="TextColor" Value="White" />
+    </Style>
+
+    <Style x:Key="DarkButton" BasedOn="{StaticResource BaseButton}" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="White" />
+        <Setter Property="TextColor" Value="{StaticResource DarkBlue}" />
     </Style>
 
 </ResourceDictionary>

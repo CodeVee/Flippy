@@ -39,7 +39,6 @@
 
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
-		<MauiImage Update="Resources\Images\dotnet_bot.svg" BaseSize="168,208" />
 
 		<!-- Custom Fonts -->
 		<MauiFont Include="Resources\Fonts\*" />
@@ -51,6 +50,11 @@
 	<ItemGroup>
 	  <None Remove="Resources\Fonts\Lato-Bold.ttf" />
 	  <None Remove="Resources\Fonts\Lato-Regular.ttf" />
+	  <None Remove="Resources\Images\logo_dark.svg" />
+	  <None Remove="Resources\Images\logo_light.svg" />
+	  <None Remove="Resources\Images\shopper_bag.svg" />
+	  <None Remove="Resources\Images\shopper_cart.svg" />
+	  <None Remove="Resources\Images\shopper_pay.svg" />
 	</ItemGroup>
 
 	<ItemGroup>
