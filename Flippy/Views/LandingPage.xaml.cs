@@ -33,4 +33,9 @@ public partial class LandingPage : ContentPage
 		var nextPosition = position + 1;
 		carousel.ScrollTo(nextPosition);
 	}
+
+	private async void OnStartBtn_Clicked(object sender, EventArgs e)
+	{
+		await Shell.Current.GoToAsync(nameof(LoginPage));
+	}
 }

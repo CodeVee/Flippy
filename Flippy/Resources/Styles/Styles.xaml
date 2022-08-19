@@ -8,12 +8,16 @@
         <Setter Property="FontFamily" Value="LatoRegular" />
     </Style>
 
+    <Style x:Key="BlueLabel" BasedOn="{StaticResource BaseLabel}" TargetType="Label">
+        <Setter Property="TextColor" Value="{StaticResource DeepBlue}" />
+    </Style>
+
     <Style x:Key="DarkLabel" BasedOn="{StaticResource BaseLabel}" TargetType="Label">
         <Setter Property="TextColor" Value="{StaticResource DarkBlue}" />
     </Style>
 
-    <Style x:Key="GreyLabel" BasedOn="{StaticResource BaseLabel}" TargetType="Label">
-        <Setter Property="TextColor" Value="{StaticResource DarkGrey}" />
+    <Style x:Key="GreyLabel" BasedOn="{StaticResource DarkLabel}" TargetType="Label">
+        <Setter Property="Opacity" Value="0.5" />
     </Style>
 
     <Style x:Key="BaseButton" TargetType="Button">
@@ -32,6 +36,23 @@
     <Style x:Key="DarkButton" BasedOn="{StaticResource BaseButton}" TargetType="Button">
         <Setter Property="BackgroundColor" Value="White" />
         <Setter Property="TextColor" Value="{StaticResource DarkBlue}" />
+    </Style>
+
+    <Style ApplyToDerivedTypes="True" TargetType="Page">
+        <Setter Property="BackgroundColor" Value="{StaticResource BgWhite}" />
+    </Style>
+
+    <Style TargetType="Entry" x:Key="BaseEntry">
+        <Setter Property="FontFamily" Value="LatoRegular" />
+        <Setter Property="TextColor" Value="{StaticResource DarkBlue}" />
+    </Style>
+
+    <Style TargetType="Entry" x:Key="SmallEntry" BasedOn="{StaticResource BaseEntry}">
+        <Setter Property="FontSize" Value="Small" />
+    </Style>
+
+    <Style TargetType="Entry" x:Key="MidEntry" BasedOn="{StaticResource BaseEntry}">
+        <Setter Property="FontSize" Value="Medium" />
     </Style>
 
 </ResourceDictionary>
