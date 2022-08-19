@@ -6,4 +6,9 @@ public partial class ForgotPasswordPage : ContentPage
 	{
 		InitializeComponent();
 	}
+
+	private async void SubmitButton_Clicked(object sender, EventArgs e)
+	{
+		await Shell.Current.GoToAsync(nameof(ResetPasswordPage));
+	}
 }
