@@ -61,7 +61,7 @@
             <Button Text="SKIP"
                     BackgroundColor="Transparent"
                     TextColor="{StaticResource DarkGrey}"
-                    Padding="0"
+                    Padding="10"
                     Clicked="OnSkipButton_Clicked"/>
             <IndicatorView x:Name="indicatorView"
                            IndicatorSize="10"
@@ -70,7 +70,7 @@
             <Button Text="NEXT"
                     BackgroundColor="Transparent"
                     TextColor="{StaticResource DeepBlue}"
-                    Padding="0"
+                    Padding="10"
                     Clicked="OnNextButton_Clicked"/>
         </FlexLayout>
         <Button Text="Get Started" 

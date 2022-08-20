@@ -81,7 +81,8 @@
             </Grid>
         </VerticalStackLayout>
         <Button Text="Login" 
-                Style="{StaticResource LightButton}"/>
+                Style="{StaticResource LightButton}"
+                Clicked="LoginButton_Clicked"/>
         <Button Text="Don't have an  account? Sign Up!" 
                     TextColor="{StaticResource DeepBlue}"
                     Grid.Column="1"

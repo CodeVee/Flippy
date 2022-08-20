@@ -20,6 +20,10 @@
         <Setter Property="Opacity" Value="0.5" />
     </Style>
 
+    <Style x:Key="WhiteLabel" BasedOn="{StaticResource BaseLabel}" TargetType="Label">
+        <Setter Property="TextColor" Value="White" />
+    </Style>
+
     <Style x:Key="BaseButton" TargetType="Button">
         <Setter Property="HeightRequest" Value="50" />
         <Setter Property="WidthRequest" Value="274" />
@@ -36,6 +40,23 @@
     <Style x:Key="DarkButton" BasedOn="{StaticResource BaseButton}" TargetType="Button">
         <Setter Property="BackgroundColor" Value="White" />
         <Setter Property="TextColor" Value="{StaticResource DarkBlue}" />
+    </Style>
+
+    <Style TargetType="Button" ApplyToDerivedTypes="True" x:Key="LinkButton">
+        <Setter Property="Padding" Value="10, 0" />
+        <Setter Property="FontFamily" Value="LatoRegular" />
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="BackgroundColor" Value="Transparent" />
+        <Setter Property="TextColor" Value="{StaticResource DeepBlue}" />
+    </Style>
+
+
+    <Style TargetType="Button" ApplyToDerivedTypes="True" x:Key="SelectButton">
+        <Setter Property="Padding" Value="14, 2" />
+        <Setter Property="FontFamily" Value="LatoRegular" />
+        <Setter Property="FontSize" Value="10" />
+        <Setter Property="BackgroundColor" Value="{StaticResource DeepBlue}" />
+        <Setter Property="TextColor" Value="White" />
     </Style>
 
     <Style ApplyToDerivedTypes="True" TargetType="Page">

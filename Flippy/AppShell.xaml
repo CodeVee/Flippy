@@ -4,12 +4,43 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:Flippy.Views"
-    Shell.FlyoutBehavior="Disabled"
-    Shell.BackgroundColor="{StaticResource DeepBlue}">
+    Shell.BackgroundColor="{StaticResource DeepBlue}"
+    Shell.TabBarBackgroundColor="White"
+    Shell.TabBarTitleColor="{StaticResource LightGreen}"
+    Shell.TabBarUnselectedColor="{StaticResource DarkBlue}">
 
     <ShellContent
+        FlyoutItemIsVisible="False"
         Title="Landing Page"
         ContentTemplate="{DataTemplate local:LandingPage}"
         Route="LandingPage" />
+
+    <TabBar>
+        <ShellContent
+            ContentTemplate="{DataTemplate local:HomePage}"
+            Icon="home_icon.svg"
+            Route="HomePage"
+            Title="Home"/>
+        <ShellContent
+            ContentTemplate="{DataTemplate local:SearchPage}"
+            Icon="search_icon.svg"
+            Route="SearchPage"
+            Title="Search"/>
+        <ShellContent
+            ContentTemplate="{DataTemplate local:CategoryPage}"
+            Icon="category_icon.svg"
+            Route="CategoryPage"
+            Title="Category"/>
+        <ShellContent
+            ContentTemplate="{DataTemplate local:CartPage}"
+            Icon="cart_icon.svg"
+            Route="CartPage"
+            Title="Cart"/>
+        <ShellContent
+            ContentTemplate="{DataTemplate local:ProfilePage}"
+            Icon="profile_icon.svg"
+            Route="ProfilePage"
+            Title="Profile"/>
+    </TabBar>
 
 </Shell>

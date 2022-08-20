@@ -14,11 +14,16 @@ public partial class LoginPage : ContentPage
 
     private async void RegisterButton_Clicked(object sender, EventArgs e)
     {
-		await Shell.Current.GoToAsync($"{nameof(RegisterPage)}");
+		await Shell.Current.GoToAsync(nameof(RegisterPage));
     }
 
     private async void ForgotButton_Clicked(object sender, EventArgs e)
     {
-        await Shell.Current.GoToAsync($"{nameof(ForgotPasswordPage)}");
+        await Shell.Current.GoToAsync(nameof(ForgotPasswordPage));
+    }
+
+    private async void LoginButton_Clicked(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync($"//{nameof(HomePage)}");
     }
 }

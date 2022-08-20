@@ -4,7 +4,7 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
-    <Color x:Key="AppGreen">#56D5A8</Color>
+    <Color x:Key="LightGreen">#56D5A8</Color>
     <Color x:Key="DeepBlue">#273773</Color>
     <Color x:Key="BgWhite">#F7F7F7</Color>
     <Color x:Key="DarkGrey">#5B5B5B</Color>

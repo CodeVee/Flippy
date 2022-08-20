@@ -50,16 +50,45 @@
 	<ItemGroup>
 	  <None Remove="Resources\Fonts\Lato-Bold.ttf" />
 	  <None Remove="Resources\Fonts\Lato-Regular.ttf" />
+	  <None Remove="Resources\Images\apple.png" />
+	  <None Remove="Resources\Images\bell_icon.svg" />
+	  <None Remove="Resources\Images\beverage_icon.svg" />
+	  <None Remove="Resources\Images\cart_icon.svg" />
+	  <None Remove="Resources\Images\category_icon.svg" />
+	  <None Remove="Resources\Images\cauliflower.png" />
+	  <None Remove="Resources\Images\cucumber.png" />
+	  <None Remove="Resources\Images\fruit_icon.svg" />
+	  <None Remove="Resources\Images\grocery_icon.svg" />
+	  <None Remove="Resources\Images\hamburger_icon.svg" />
+	  <None Remove="Resources\Images\heart_icon.svg" />
 	  <None Remove="Resources\Images\hide.svg" />
+	  <None Remove="Resources\Images\home_cart.png" />
+	  <None Remove="Resources\Images\home_icon.svg" />
 	  <None Remove="Resources\Images\logo_dark.svg" />
 	  <None Remove="Resources\Images\logo_light.svg" />
+	  <None Remove="Resources\Images\mushroom.png" />
+	  <None Remove="Resources\Images\pawpaw.png" />
+	  <None Remove="Resources\Images\pear.png" />
+	  <None Remove="Resources\Images\profile_icon.svg" />
+	  <None Remove="Resources\Images\right_arrow.svg" />
+	  <None Remove="Resources\Images\search_icon.svg" />
 	  <None Remove="Resources\Images\shopper_bag.svg" />
 	  <None Remove="Resources\Images\shopper_cart.svg" />
 	  <None Remove="Resources\Images\shopper_pay.svg" />
+	  <None Remove="Resources\Images\vegetable_icon.svg" />
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Views\CartPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\CategoryPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\ForgotPasswordPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\HomePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\LandingPage.xaml">
@@ -68,10 +97,16 @@
 	  <MauiXaml Update="Views\LoginPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\ProfilePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\RegisterPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\ResetPasswordPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\SearchPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
