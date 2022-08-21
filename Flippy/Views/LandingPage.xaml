@@ -1,83 +1,94 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Flippy.Views.LandingPage"
-             xmlns:model="clr-namespace:Flippy.Models"
-             Title="LandingPage"
-             Shell.NavBarIsVisible="False">
+<ContentPage
+    x:Class="Flippy.Views.LandingPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:model="clr-namespace:Flippy.Models"
+    Title="LandingPage"
+    Shell.NavBarIsVisible="False">
     <Grid RowDefinitions="160, Auto, *">
-        <Image Source="logo_light.svg"
-               Margin="0, 48, 0, 46" x:Name="logo"/>
-        <CarouselView IndicatorView="indicatorView" 
-                      Grid.Row="1"
-                      x:Name="carousel"
-                      PositionChanged="OnPositionChanged"
-                      Loop="False">
+        <Image
+            x:Name="logo"
+            Margin="0,48,0,46"
+            Source="logo_light.svg" />
+        <CarouselView
+            x:Name="carousel"
+            Grid.Row="1"
+            IndicatorView="indicatorView"
+            Loop="False"
+            PositionChanged="OnPositionChanged">
             <CarouselView.ItemsSource>
                 <x:Array Type="{x:Type model:Landing}">
                     <model:Landing
-                            Header="Choose Item Online"
-                            Message="Plan your trip, choose your destination.Pick the best place for your holiday."
-                            ImageSource="shopper_cart.svg"/>
+                        Header="Choose Item Online"
+                        ImageSource="shopper_cart.svg"
+                        Message="Plan your trip, choose your destination.Pick the best place for your holiday." />
                     <model:Landing
-                            Header="Payment Online"
-                            Message="Plan your trip, choose your destination.Pick the best place for your holiday."
-                            ImageSource="shopper_pay.svg"/>
+                        Header="Payment Online"
+                        ImageSource="shopper_pay.svg"
+                        Message="Plan your trip, choose your destination.Pick the best place for your holiday." />
                     <model:Landing
-                            Header="Get Your Order"
-                            Message="Plan your trip, choose your destination.Pick the best place for your holiday."
-                            ImageSource="shopper_bag.svg"/>
+                        Header="Get Your Order"
+                        ImageSource="shopper_bag.svg"
+                        Message="Plan your trip, choose your destination.Pick the best place for your holiday." />
                 </x:Array>
             </CarouselView.ItemsSource>
             <CarouselView.ItemTemplate>
                 <DataTemplate>
                     <VerticalStackLayout>
-                        <HorizontalStackLayout HeightRequest="335" Margin="0, 0, 0, 75">
-                            <Image Source="{Binding ImageSource}"
-                                   x:Name="imgCarousel"
-                                   Aspect="Fill"
-                                   VerticalOptions="EndAndExpand"
-                                />
+                        <HorizontalStackLayout Margin="0,0,0,75" HeightRequest="335">
+                            <Image
+                                x:Name="imgCarousel"
+                                Aspect="Fill"
+                                Source="{Binding ImageSource}"
+                                VerticalOptions="EndAndExpand" />
                         </HorizontalStackLayout>
-                        <Label Text="{Binding Header}"
-                               HorizontalOptions="Center"
-                               Style="{StaticResource DarkLabel}"
-                               FontSize="22"
-                               Margin="0, 19"/>
-                        <Label Text="{Binding Message}"
-                               Style="{StaticResource GreyLabel}"
-                               HorizontalOptions="Center" 
-                               Padding="78, 0"
-                               FontSize="14" />
+                        <Label
+                            Margin="0,19"
+                            FontSize="22"
+                            HorizontalOptions="Center"
+                            Style="{StaticResource DarkLabel}"
+                            Text="{Binding Header}" />
+                        <Label
+                            Padding="78,0"
+                            FontSize="14"
+                            HorizontalOptions="Center"
+                            Style="{StaticResource GreyLabel}"
+                            Text="{Binding Message}" />
                     </VerticalStackLayout>
                 </DataTemplate>
             </CarouselView.ItemTemplate>
         </CarouselView>
-        <FlexLayout JustifyContent="SpaceBetween"
-                    x:Name="footer"
-                    AlignItems="Center"
-                    Margin="30, 45, 30, 0"
-                    Grid.Row="2">
-            <Button Text="SKIP"
-                    BackgroundColor="Transparent"
-                    TextColor="{StaticResource DarkGrey}"
-                    Padding="10"
-                    Clicked="OnSkipButton_Clicked"/>
-            <IndicatorView x:Name="indicatorView"
-                           IndicatorSize="10"
-                   IndicatorColor="#2737734d"
-                   SelectedIndicatorColor="{StaticResource DeepBlue}" />
-            <Button Text="NEXT"
-                    BackgroundColor="Transparent"
-                    TextColor="{StaticResource DeepBlue}"
-                    Padding="10"
-                    Clicked="OnNextButton_Clicked"/>
+        <FlexLayout
+            x:Name="footer"
+            Grid.Row="2"
+            Margin="30,45,30,0"
+            AlignItems="Center"
+            JustifyContent="SpaceBetween">
+            <Button
+                Padding="10"
+                BackgroundColor="Transparent"
+                Clicked="OnSkipButton_Clicked"
+                Text="SKIP"
+                TextColor="{StaticResource DarkGrey}" />
+            <IndicatorView
+                x:Name="indicatorView"
+                IndicatorColor="#2737734d"
+                IndicatorSize="10"
+                SelectedIndicatorColor="{StaticResource DeepBlue}" />
+            <Button
+                Padding="10"
+                BackgroundColor="Transparent"
+                Clicked="OnNextButton_Clicked"
+                Text="NEXT"
+                TextColor="{StaticResource DeepBlue}" />
         </FlexLayout>
-        <Button Text="Get Started" 
-                Style="{StaticResource LightButton}"
-                Grid.Row="2"
-                IsVisible="false"
-                x:Name="startBtn"
-                Clicked="OnStartBtn_Clicked"/>
+        <Button
+            x:Name="startBtn"
+            Grid.Row="2"
+            Clicked="OnStartBtn_Clicked"
+            IsVisible="false"
+            Style="{StaticResource LightButton}"
+            Text="Get Started" />
     </Grid>
 </ContentPage>

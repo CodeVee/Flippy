@@ -10,37 +10,37 @@
     Shell.TabBarUnselectedColor="{StaticResource DarkBlue}">
 
     <ShellContent
-        FlyoutItemIsVisible="False"
         Title="Landing Page"
         ContentTemplate="{DataTemplate local:LandingPage}"
+        FlyoutItemIsVisible="False"
         Route="LandingPage" />
 
     <TabBar>
         <ShellContent
+            Title="Home"
             ContentTemplate="{DataTemplate local:HomePage}"
             Icon="home_icon.svg"
-            Route="HomePage"
-            Title="Home"/>
+            Route="HomePage" />
         <ShellContent
+            Title="Search"
             ContentTemplate="{DataTemplate local:SearchPage}"
             Icon="search_icon.svg"
-            Route="SearchPage"
-            Title="Search"/>
+            Route="SearchPage" />
         <ShellContent
+            Title="Category"
             ContentTemplate="{DataTemplate local:CategoryPage}"
             Icon="category_icon.svg"
-            Route="CategoryPage"
-            Title="Category"/>
+            Route="CategoryPage" />
         <ShellContent
+            Title="Cart"
             ContentTemplate="{DataTemplate local:CartPage}"
             Icon="cart_icon.svg"
-            Route="CartPage"
-            Title="Cart"/>
+            Route="CartPage" />
         <ShellContent
+            Title="Profile"
             ContentTemplate="{DataTemplate local:ProfilePage}"
             Icon="profile_icon.svg"
-            Route="ProfilePage"
-            Title="Profile"/>
+            Route="ProfilePage" />
     </TabBar>
 
 </Shell>

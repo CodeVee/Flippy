@@ -1,26 +1,36 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <?xaml-comp compile="true" ?>
-<ResourceDictionary 
-    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+<ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
-    <Style TargetType="Label" x:Key="BaseLabel">
+    <Style x:Key="BaseLabel" TargetType="Label">
         <Setter Property="FontFamily" Value="LatoRegular" />
     </Style>
 
-    <Style x:Key="BlueLabel" BasedOn="{StaticResource BaseLabel}" TargetType="Label">
+    <Style
+        x:Key="BlueLabel"
+        BasedOn="{StaticResource BaseLabel}"
+        TargetType="Label">
         <Setter Property="TextColor" Value="{StaticResource DeepBlue}" />
     </Style>
 
-    <Style x:Key="DarkLabel" BasedOn="{StaticResource BaseLabel}" TargetType="Label">
+    <Style
+        x:Key="DarkLabel"
+        BasedOn="{StaticResource BaseLabel}"
+        TargetType="Label">
         <Setter Property="TextColor" Value="{StaticResource DarkBlue}" />
     </Style>
 
-    <Style x:Key="GreyLabel" BasedOn="{StaticResource DarkLabel}" TargetType="Label">
+    <Style
+        x:Key="GreyLabel"
+        BasedOn="{StaticResource DarkLabel}"
+        TargetType="Label">
         <Setter Property="Opacity" Value="0.5" />
     </Style>
 
-    <Style x:Key="WhiteLabel" BasedOn="{StaticResource BaseLabel}" TargetType="Label">
+    <Style
+        x:Key="WhiteLabel"
+        BasedOn="{StaticResource BaseLabel}"
+        TargetType="Label">
         <Setter Property="TextColor" Value="White" />
     </Style>
 
@@ -32,17 +42,26 @@
         <Setter Property="FontSize" Value="16" />
     </Style>
 
-    <Style x:Key="LightButton" BasedOn="{StaticResource BaseButton}" TargetType="Button">
+    <Style
+        x:Key="LightButton"
+        BasedOn="{StaticResource BaseButton}"
+        TargetType="Button">
         <Setter Property="BackgroundColor" Value="{StaticResource DeepBlue}" />
         <Setter Property="TextColor" Value="White" />
     </Style>
 
-    <Style x:Key="DarkButton" BasedOn="{StaticResource BaseButton}" TargetType="Button">
+    <Style
+        x:Key="DarkButton"
+        BasedOn="{StaticResource BaseButton}"
+        TargetType="Button">
         <Setter Property="BackgroundColor" Value="White" />
         <Setter Property="TextColor" Value="{StaticResource DarkBlue}" />
     </Style>
 
-    <Style TargetType="Button" ApplyToDerivedTypes="True" x:Key="LinkButton">
+    <Style
+        x:Key="LinkButton"
+        ApplyToDerivedTypes="True"
+        TargetType="Button">
         <Setter Property="Padding" Value="10, 0" />
         <Setter Property="FontFamily" Value="LatoRegular" />
         <Setter Property="FontSize" Value="12" />
@@ -51,7 +70,10 @@
     </Style>
 
 
-    <Style TargetType="Button" ApplyToDerivedTypes="True" x:Key="SelectButton">
+    <Style
+        x:Key="SelectButton"
+        ApplyToDerivedTypes="True"
+        TargetType="Button">
         <Setter Property="Padding" Value="14, 2" />
         <Setter Property="FontFamily" Value="LatoRegular" />
         <Setter Property="FontSize" Value="10" />
@@ -63,16 +85,22 @@
         <Setter Property="BackgroundColor" Value="{StaticResource BgWhite}" />
     </Style>
 
-    <Style TargetType="Entry" x:Key="BaseEntry">
+    <Style x:Key="BaseEntry" TargetType="Entry">
         <Setter Property="FontFamily" Value="LatoRegular" />
         <Setter Property="TextColor" Value="{StaticResource DarkBlue}" />
     </Style>
 
-    <Style TargetType="Entry" x:Key="SmallEntry" BasedOn="{StaticResource BaseEntry}">
+    <Style
+        x:Key="SmallEntry"
+        BasedOn="{StaticResource BaseEntry}"
+        TargetType="Entry">
         <Setter Property="FontSize" Value="Small" />
     </Style>
 
-    <Style TargetType="Entry" x:Key="MidEntry" BasedOn="{StaticResource BaseEntry}">
+    <Style
+        x:Key="MidEntry"
+        BasedOn="{StaticResource BaseEntry}"
+        TargetType="Entry">
         <Setter Property="FontSize" Value="Medium" />
     </Style>
 
