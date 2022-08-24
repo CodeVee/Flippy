@@ -93,7 +93,7 @@
                                     </x:Array>
                                 </Picker.ItemsSource>
                             </Picker>
-                            <Image Source="arrow_down_icon" Grid.Column="1" />
+                            <Image Grid.Column="1" Source="arrow_down_icon" />
                         </Grid>
 
                     </Border>

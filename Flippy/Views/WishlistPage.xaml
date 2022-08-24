@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Flippy.Views.WishlistPage"
+             xmlns:model="clr-namespace:Flippy.Models">
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior IconOverride="back_icon.svg" />
+    </Shell.BackButtonBehavior>
+    <Shell.TitleView>
+        <Label
+            Text="Wishlist"
+            FontSize="16"
+            HorizontalOptions="Center"
+            Style="{StaticResource WhiteLabel}"
+            VerticalOptions="Center" />
+    </Shell.TitleView>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="bell_icon.svg" />
+    </ContentPage.ToolbarItems>
+    <ScrollView>
+        <VerticalStackLayout Padding="15">
+            <CollectionView>
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout
+                        HorizontalItemSpacing="15"
+                        Orientation="Vertical"
+                        Span="2"
+                        VerticalItemSpacing="27" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemsSource>
+                    <x:Array Type="{x:Type model:Product}">
+                        <model:Product
+                            Name="Mushrooms"
+                            ImageSource="mushroom.png"
+                            Price="150"
+                            Weight="1KG" />
+                        <model:Product
+                            Name="Cauliflowers"
+                            ImageSource="cauliflower.png"
+                            Price="300"
+                            Weight="2KG" />
+                        <model:Product
+                            Name="Cucumbers"
+                            ImageSource="cucumber.png"
+                            Price="250"
+                            Weight="5KG" />
+                        <model:Product
+                            Name="Carrots"
+                            ImageSource="https://freshpointlocal.co.uk/wp-content/uploads/2018/08/BunchCarrots-800x800.jpg"
+                            Price="130"
+                            Weight="3.5KG" />
+                        <model:Product
+                            Name="Grapes"
+                            ImageSource="grape.png"
+                            Price="150"
+                            Weight="1KG" />
+                        <model:Product
+                            Name="Tomatoes"
+                            ImageSource="tomato.png"
+                            Price="300"
+                            Weight="2KG" />
+                        <model:Product
+                            Name="Watermelons"
+                            ImageSource="watermelon.png"
+                            Price="250"
+                            Weight="5KG" />
+                        <model:Product
+                            Name="Pawpaws"
+                            ImageSource="pawpaw.png"
+                            Price="130"
+                            Weight="3.5KG" />
+                    </x:Array>
+                </CollectionView.ItemsSource>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <VerticalStackLayout Spacing="12.4">
+                            <Border StrokeShape="RoundRectangle 10">
+                                <VerticalStackLayout Padding="13.8" Spacing="8.3">
+                                    <Grid ColumnDefinitions="*, Auto">
+                                        <Border
+                                            Padding="7,2"
+                                            BackgroundColor="{StaticResource DarkBlue}"
+                                            HorizontalOptions="Start"
+                                            Opacity="0.5"
+                                            StrokeShape="RoundRectangle 10">
+                                            <Label
+                                                FontSize="13"
+                                                Style="{StaticResource WhiteLabel}"
+                                                Text="{Binding Weight}" />
+                                        </Border>
+                                        <Image
+                                            Grid.Column="1"
+                                            HeightRequest="13"
+                                            Source="heart_full_icon.svg"
+                                            WidthRequest="14.5" />
+                                    </Grid>
+                                    <Image
+                                        Aspect="AspectFill"
+                                        HeightRequest="124"
+                                        IsOpaque="True"
+                                        Source="{Binding ImageSource}" />
+                                </VerticalStackLayout>
+                            </Border>
+                            <Grid
+                                ColumnDefinitions="*, Auto"
+                                RowDefinitions="*, Auto"
+                                RowSpacing="5">
+                                <Label
+                                    Grid.ColumnSpan="2"
+                                    FontSize="12"
+                                    Style="{StaticResource GreyLabel}"
+                                    Text="{Binding Name}" />
+                                <Label
+                                    Grid.Row="1"
+                                    Grid.Column="0"
+                                    FontSize="16"
+                                    Style="{StaticResource DarkLabel}"
+                                    Text="{Binding Price, StringFormat='{0:C}'}"
+                                    VerticalOptions="Center" />
+                                <Button
+                                    Grid.Row="1"
+                                    Grid.Column="1"
+                                    FontSize="13"
+                                    Style="{StaticResource SelectButton}"
+                                    Text="Add" />
+                            </Grid>
+
+                        </VerticalStackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

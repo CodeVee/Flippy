@@ -77,7 +77,8 @@
                 <ImageButton
                     Grid.Column="2"
                     Source="right_arrow.svg"
-                    WidthRequest="8" />
+                    WidthRequest="8" 
+                    Clicked="WishlistButton_Clicked"/>
             </Grid>
             <Grid
                 ColumnDefinitions="30, *, Auto"
