@@ -16,4 +16,9 @@ public partial class ProfilePage : ContentPage
 	{
 		await Shell.Current.GoToAsync(nameof(WishlistPage));
     }
+
+    private async void AddressButton_Clicked(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync(nameof(AddressPage));
+    }
 }

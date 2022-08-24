@@ -63,6 +63,7 @@
 	  <None Remove="Resources\Images\category_icon.svg" />
 	  <None Remove="Resources\Images\cauliflower.png" />
 	  <None Remove="Resources\Images\cucumber.png" />
+	  <None Remove="Resources\Images\edit_icon.svg" />
 	  <None Remove="Resources\Images\filter_icon.svg" />
 	  <None Remove="Resources\Images\fruit_icon.svg" />
 	  <None Remove="Resources\Images\grape.png" />
@@ -97,6 +98,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Views\AddressPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\CartPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
