@@ -8,7 +8,7 @@
             FontSize="16"
             HorizontalOptions="Center"
             Style="{StaticResource WhiteLabel}"
-            Text="Profile"
+            Text="Address"
             VerticalOptions="Center" />
     </Shell.TitleView>
 
@@ -22,7 +22,7 @@
                 Style="{StaticResource BlueLabel}"
                 Text="+ Add a new address">
                 <Label.GestureRecognizers>
-                    <TapGestureRecognizer />
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
                 </Label.GestureRecognizers>
             </Label>
             <VerticalStackLayout Grid.Row="1" Spacing="20">
@@ -34,11 +34,11 @@
                         HeightRequest="100">
                         <Border
                             HeightRequest="14"
+                            Opacity="0.2"
                             Stroke="{StaticResource DarkBlue}"
                             StrokeShape="Ellipse"
                             StrokeThickness="1"
-                            VerticalOptions="Start"                           
-                            Opacity="0.2">
+                            VerticalOptions="Start">
                             <Ellipse
                                 Fill="{StaticResource DarkBlue}"
                                 HeightRequest="6"

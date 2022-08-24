@@ -61,6 +61,9 @@
                 ColumnDefinitions="30, *, Auto"
                 ColumnSpacing="20"
                 HeightRequest="30">
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="WishlistButton_Clicked" />
+                </Grid.GestureRecognizers>
                 <Border
                     Padding="7"
                     BackgroundColor="{StaticResource DeepBlue}"
@@ -74,16 +77,18 @@
                     Style="{StaticResource GreyLabel}"
                     Text="Wishlist"
                     VerticalOptions="Center" />
-                <ImageButton
+                <Image
                     Grid.Column="2"
                     Source="right_arrow.svg"
-                    WidthRequest="8" 
-                    Clicked="WishlistButton_Clicked"/>
+                    WidthRequest="8" />
             </Grid>
             <Grid
                 ColumnDefinitions="30, *, Auto"
                 ColumnSpacing="20"
                 HeightRequest="30">
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="AddressButton_Clicked" />
+                </Grid.GestureRecognizers>
                 <Border
                     Padding="7"
                     BackgroundColor="#2CADE9"
@@ -97,11 +102,10 @@
                     Style="{StaticResource GreyLabel}"
                     Text="Address"
                     VerticalOptions="Center" />
-                <ImageButton
+                <Image
                     Grid.Column="2"
                     Source="right_arrow.svg"
-                    WidthRequest="8" 
-                    Clicked="AddressButton_Clicked"/>
+                    WidthRequest="8"/>
             </Grid>
             <Grid
                 ColumnDefinitions="30, *, Auto"
