@@ -30,7 +30,10 @@
                     Style="{StaticResource DarkLabel}"
                     Text="All Categories" />
                 <HorizontalStackLayout Grid.Column="1">
-                    <Button Style="{StaticResource LinkButton}" Text="View All" Clicked="AllButton_Clicked" />
+                    <Button
+                        Clicked="AllButton_Clicked"
+                        Style="{StaticResource LinkButton}"
+                        Text="View All" />
                     <Image Source="right_arrow.svg" />
                 </HorizontalStackLayout>
             </Grid>
@@ -90,7 +93,10 @@
                     Style="{StaticResource DarkLabel}"
                     Text="Best Sellers" />
                 <HorizontalStackLayout Grid.Column="1">
-                    <Button Style="{StaticResource LinkButton}" Text="View All" Clicked="BestSellerButton_Clicked" />
+                    <Button
+                        Clicked="BestSellerButton_Clicked"
+                        Style="{StaticResource LinkButton}"
+                        Text="View All" />
                     <Image Source="right_arrow.svg" />
                 </HorizontalStackLayout>
             </Grid>
@@ -182,7 +188,10 @@
                     Style="{StaticResource DarkLabel}"
                     Text="Fruits" />
                 <HorizontalStackLayout Grid.Column="1">
-                    <Button Style="{StaticResource LinkButton}" Text="View All" Clicked="FruitButton_Clicked" />
+                    <Button
+                        Clicked="FruitButton_Clicked"
+                        Style="{StaticResource LinkButton}"
+                        Text="View All" />
                     <Image Source="right_arrow.svg" />
                 </HorizontalStackLayout>
             </Grid>

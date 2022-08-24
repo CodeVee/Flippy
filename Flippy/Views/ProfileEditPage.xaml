@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Flippy.Views.ProfileEditPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Shell.BackgroundColor="White"
+    Shell.PresentationMode="ModalAnimated">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="CancelBtn" IconImageSource="cancel_icon.svg" />
+    </ContentPage.ToolbarItems>
+    <Shell.TitleView>
+        <Label
+            FontSize="16"
+            HorizontalOptions="Center"
+            Style="{StaticResource DarkLabel}"
+            Text="Profile"
+            VerticalOptions="Center" />
+    </Shell.TitleView>
+    <VerticalStackLayout>
+        <Grid
+            Padding="16,0"
+            BackgroundColor="White"
+            ColumnDefinitions="*, 16"
+            HeightRequest="50">
+            <Label
+                FontSize="16"
+                HorizontalOptions="Center"
+                Style="{StaticResource DarkLabel}"
+                Text="Profile"
+                VerticalOptions="Center" />
+            <ImageButton
+                x:Name="CloseBtn"
+                Grid.Column="1"
+                Clicked="CloseBtn_Clicked"
+                HeightRequest="16"
+                Source="cancel_icon.svg" />
+        </Grid>
+        <VerticalStackLayout
+            Margin="0,0,0,40"
+            Padding="0,30"
+            BackgroundColor="White">
+            <Border
+                HeightRequest="100"
+                StrokeShape="Ellipse"
+                WidthRequest="100">
+                <Grid>
+                    <Image Aspect="AspectFill" Source="user_avatar.png" />
+                    <FlexLayout
+                        BackgroundColor="{StaticResource DarkBlue}"
+                        JustifyContent="Center"
+                        Opacity="0.5">
+                        <ImageButton Source="camera_icon.svg" />
+                    </FlexLayout>
+                </Grid>
+
+            </Border>
+
+            <VerticalStackLayout Padding="15,30" Spacing="20">
+                <Border
+                    Padding="24,5"
+                    Stroke="{StaticResource LightGrey}"
+                    StrokeShape="RoundRectangle 30"
+                    StrokeThickness="1">
+                    <Entry Style="{StaticResource MidEntry}" Text="William" />
+                </Border>
+                <Border
+                    Padding="24,5"
+                    Stroke="{StaticResource LightGrey}"
+                    StrokeShape="RoundRectangle 30"
+                    StrokeThickness="1">
+                    <Entry Style="{StaticResource MidEntry}" Text="williamman@example.com" />
+                </Border>
+                <Grid ColumnDefinitions="115, *" ColumnSpacing="15">
+                    <Border
+                        Padding="24,5"
+                        Stroke="{StaticResource LightGrey}"
+                        StrokeShape="RoundRectangle 30"
+                        StrokeThickness="1">
+                        <Grid ColumnDefinitions="*, Auto">
+                            <Picker
+                                x:Name="picker"
+                                Title="Code"
+                                BackgroundColor="Transparent">
+                                <Picker.ItemsSource>
+                                    <x:Array Type="{x:Type x:String}">
+                                        <x:String>+234</x:String>
+                                        <x:String>+44</x:String>
+                                        <x:String>+91</x:String>
+                                        <x:String>+233</x:String>
+                                        <x:String>+1</x:String>
+                                        <x:String>+78</x:String>
+                                        <x:String>+285</x:String>
+                                    </x:Array>
+                                </Picker.ItemsSource>
+                            </Picker>
+                            <Image Source="arrow_down_icon" Grid.Column="1" />
+                        </Grid>
+
+                    </Border>
+                    <Border
+                        Grid.Column="1"
+                        Padding="24,5"
+                        Stroke="{StaticResource LightGrey}"
+                        StrokeShape="RoundRectangle 30"
+                        StrokeThickness="1">
+                        <Entry Style="{StaticResource MidEntry}" Text="2540158777" />
+                    </Border>
+                </Grid>
+            </VerticalStackLayout>
+            <Button Style="{StaticResource LightButton}" Text="Save Change" />
+        </VerticalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>

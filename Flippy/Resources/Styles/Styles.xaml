@@ -88,6 +88,7 @@
     <Style x:Key="BaseEntry" TargetType="Entry">
         <Setter Property="FontFamily" Value="LatoRegular" />
         <Setter Property="TextColor" Value="{StaticResource DarkBlue}" />
+        <Setter Property="BackgroundColor" Value="Transparent" />
     </Style>
 
     <Style
@@ -101,7 +102,7 @@
         x:Key="MidEntry"
         BasedOn="{StaticResource BaseEntry}"
         TargetType="Entry">
-        <Setter Property="FontSize" Value="Medium" />
+        <Setter Property="FontSize" Value="14" />
     </Style>
 
 </ResourceDictionary>

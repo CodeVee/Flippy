@@ -46,7 +46,7 @@
                         FontSize="10"
                         Style="{StaticResource GreyLabel}"
                         Text="User Name" />
-                    <Entry BackgroundColor="Transparent" Style="{StaticResource MidEntry}" />
+                    <Entry Style="{StaticResource MidEntry}" />
                 </VerticalStackLayout>
             </Border>
             <Border StrokeShape="RoundRectangle 6">
@@ -58,7 +58,6 @@
                     <Grid ColumnDefinitions="*, Auto">
                         <Entry
                             x:Name="passwordEntry"
-                            BackgroundColor="Transparent"
                             IsPassword="True"
                             Style="{StaticResource MidEntry}" />
                         <ImageButton

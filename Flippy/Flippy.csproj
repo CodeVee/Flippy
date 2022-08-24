@@ -50,10 +50,15 @@
 	<ItemGroup>
 	  <None Remove="Resources\Fonts\Lato-Bold.ttf" />
 	  <None Remove="Resources\Fonts\Lato-Regular.ttf" />
+	  <None Remove="Resources\Images\address_icon.svg" />
 	  <None Remove="Resources\Images\apple.png" />
+	  <None Remove="Resources\Images\arrow_down_icon.svg" />
 	  <None Remove="Resources\Images\back_icon.svg" />
 	  <None Remove="Resources\Images\bell_icon.svg" />
 	  <None Remove="Resources\Images\beverage_icon.svg" />
+	  <None Remove="Resources\Images\blog_icon.svg" />
+	  <None Remove="Resources\Images\camera_icon.svg" />
+	  <None Remove="Resources\Images\cancel_icon.svg" />
 	  <None Remove="Resources\Images\cart_icon.svg" />
 	  <None Remove="Resources\Images\category_icon.svg" />
 	  <None Remove="Resources\Images\cauliflower.png" />
@@ -63,14 +68,18 @@
 	  <None Remove="Resources\Images\grape.png" />
 	  <None Remove="Resources\Images\grocery_icon.svg" />
 	  <None Remove="Resources\Images\hamburger_icon.svg" />
+	  <None Remove="Resources\Images\heart_dark_icon.svg" />
 	  <None Remove="Resources\Images\heart_full_icon.svg" />
 	  <None Remove="Resources\Images\heart_icon.svg" />
 	  <None Remove="Resources\Images\hide.svg" />
 	  <None Remove="Resources\Images\home_cart.png" />
 	  <None Remove="Resources\Images\home_icon.svg" />
+	  <None Remove="Resources\Images\logout_icon.svg" />
 	  <None Remove="Resources\Images\logo_dark.svg" />
 	  <None Remove="Resources\Images\logo_light.svg" />
+	  <None Remove="Resources\Images\moon_icon.svg" />
 	  <None Remove="Resources\Images\mushroom.png" />
+	  <None Remove="Resources\Images\order_icon.svg" />
 	  <None Remove="Resources\Images\pawpaw.png" />
 	  <None Remove="Resources\Images\pear.png" />
 	  <None Remove="Resources\Images\profile_icon.svg" />
@@ -81,8 +90,10 @@
 	  <None Remove="Resources\Images\shopper_pay.svg" />
 	  <None Remove="Resources\Images\tomato.png" />
 	  <None Remove="Resources\Images\top_down_arrow_icon.svg" />
+	  <None Remove="Resources\Images\user_avatar.png" />
 	  <None Remove="Resources\Images\vegetable_icon.svg" />
 	  <None Remove="Resources\Images\watermelon.png" />
+	  <None Remove="Resources\Images\whatsapp_icon.svg" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -105,6 +116,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\ProductListPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\ProfileEditPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\ProfilePage.xaml">

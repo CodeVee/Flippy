@@ -50,9 +50,10 @@
                             Style="{StaticResource DarkLabel}"
                             Text="{Binding Header}" />
                         <Label
-                            Padding="78,0"
+                            Padding="80,0"
                             FontSize="14"
                             HorizontalOptions="Center"
+                            HorizontalTextAlignment="Center"
                             Style="{StaticResource GreyLabel}"
                             Text="{Binding Message}" />
                     </VerticalStackLayout>
