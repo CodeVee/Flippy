@@ -90,6 +90,8 @@
 	  <None Remove="Resources\Images\shopper_bag.svg" />
 	  <None Remove="Resources\Images\shopper_cart.svg" />
 	  <None Remove="Resources\Images\shopper_pay.svg" />
+	  <None Remove="Resources\Images\star_empty_icon.svg" />
+	  <None Remove="Resources\Images\star_full_icon.svg" />
 	  <None Remove="Resources\Images\tomato.png" />
 	  <None Remove="Resources\Images\top_down_arrow_icon.svg" />
 	  <None Remove="Resources\Images\user_avatar.png" />
@@ -121,6 +123,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\LoginPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\OrderPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\ProductListPage.xaml">
