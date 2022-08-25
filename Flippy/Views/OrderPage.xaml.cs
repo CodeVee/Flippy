@@ -9,6 +9,6 @@ public partial class OrderPage : ContentPage
 
 	private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
 	{
-		await Shell.Current.GoToAsync("");
+		await Shell.Current.GoToAsync(nameof(ReviewPage));
 	}
 }

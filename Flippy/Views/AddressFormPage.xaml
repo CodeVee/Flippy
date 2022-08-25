@@ -130,11 +130,20 @@
                         <Entry Placeholder="10-digit mobile number*" Style="{StaticResource MidEntry}" />
                     </VerticalStackLayout>
                 </Border>
-                <BoxView HeightRequest="1" BackgroundColor="{StaticResource DarkBlue}" Opacity="0.1" />
-                <Label Text="Address Type" Style="{StaticResource GreyLabel}" FontSize="12" />
+                <BoxView BackgroundColor="{StaticResource LightGrey}" HeightRequest="1" />
+                <Label
+                    FontSize="12"
+                    Style="{StaticResource GreyLabel}"
+                    Text="Address Type" />
                 <VerticalStackLayout>
-                    <RadioButton Content="Home Address" Value="1" BackgroundColor="Transparent"/>
-                    <RadioButton Content="Work/Office Address" Value="2" BackgroundColor="Transparent" />
+                    <RadioButton
+                        BackgroundColor="Transparent"
+                        Content="Home Address"
+                        Value="1" />
+                    <RadioButton
+                        BackgroundColor="Transparent"
+                        Content="Work/Office Address"
+                        Value="2" />
                 </VerticalStackLayout>
             </VerticalStackLayout>
             <Button Style="{StaticResource LightButton}" Text="Save" />
