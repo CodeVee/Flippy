@@ -117,9 +117,7 @@
                                 Text="Delivered on Feb 12, 2021" />
                         </HorizontalStackLayout>
                     </VerticalStackLayout>
-                    <BoxView
-                        BackgroundColor="{StaticResource LightGrey}"
-                        HeightRequest="1" />
+                    <BoxView BackgroundColor="{StaticResource LightGrey}" HeightRequest="1" />
                     <Grid Padding="10,12,16,14" ColumnDefinitions="*, Auto">
                         <HorizontalStackLayout Spacing="5">
                             <Image Source="star_full_icon.svg" />

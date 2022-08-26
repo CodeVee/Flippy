@@ -158,6 +158,9 @@
                 ColumnDefinitions="30, *, Auto"
                 ColumnSpacing="20"
                 HeightRequest="30">
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="BlogButton_Clicked" />
+                </Grid.GestureRecognizers>
                 <Border
                     Padding="7"
                     BackgroundColor="#471CF9"
@@ -171,7 +174,7 @@
                     Style="{StaticResource GreyLabel}"
                     Text="Blog"
                     VerticalOptions="Center" />
-                <ImageButton
+                <Image
                     Grid.Column="2"
                     Source="right_arrow.svg"
                     WidthRequest="8" />
