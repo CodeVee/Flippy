@@ -55,6 +55,7 @@
 	  <None Remove="Resources\Images\arrow_back_dark.svg" />
 	  <None Remove="Resources\Images\arrow_down_icon.svg" />
 	  <None Remove="Resources\Images\back_icon.svg" />
+	  <None Remove="Resources\Images\bell_blue_icon.svg" />
 	  <None Remove="Resources\Images\bell_icon.svg" />
 	  <None Remove="Resources\Images\beverage_icon.svg" />
 	  <None Remove="Resources\Images\blog_icon.svg" />
@@ -127,6 +128,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\LoginPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\NotificationPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\OrderPage.xaml">
