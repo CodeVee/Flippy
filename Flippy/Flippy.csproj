@@ -87,6 +87,7 @@
 	  <None Remove="Resources\Images\pear.png" />
 	  <None Remove="Resources\Images\profile_icon.svg" />
 	  <None Remove="Resources\Images\right_arrow.svg" />
+	  <None Remove="Resources\Images\search_close_icon.svg" />
 	  <None Remove="Resources\Images\search_icon.svg" />
 	  <None Remove="Resources\Images\send_icon.svg" />
 	  <None Remove="Resources\Images\shopper_bag.svg" />
@@ -94,6 +95,7 @@
 	  <None Remove="Resources\Images\shopper_pay.svg" />
 	  <None Remove="Resources\Images\star_empty_icon.svg" />
 	  <None Remove="Resources\Images\star_full_icon.svg" />
+	  <None Remove="Resources\Images\tick_icon.svg" />
 	  <None Remove="Resources\Images\tomato.png" />
 	  <None Remove="Resources\Images\top_down_arrow_icon.svg" />
 	  <None Remove="Resources\Images\user_avatar.png" />

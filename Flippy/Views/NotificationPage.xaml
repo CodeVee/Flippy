@@ -33,8 +33,8 @@
                     <Grid HeightRequest="33" VerticalOptions="Start">
                         <Border
                             BackgroundColor="{StaticResource DeepBlue}"
-                            Opacity="0.2"
                             HeightRequest="33"
+                            Opacity="0.2"
                             StrokeShape="Ellipse"
                             VerticalOptions="Start" />
                         <Image Source="bell_blue_icon.svg" VerticalOptions="Center" />
