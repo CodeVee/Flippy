@@ -61,6 +61,7 @@
 	  <None Remove="Resources\Images\blog_icon.svg" />
 	  <None Remove="Resources\Images\camera_icon.svg" />
 	  <None Remove="Resources\Images\cancel_icon.svg" />
+	  <None Remove="Resources\Images\cart_delete_icon.svg" />
 	  <None Remove="Resources\Images\cart_icon.svg" />
 	  <None Remove="Resources\Images\category_icon.svg" />
 	  <None Remove="Resources\Images\cauliflower.png" />
@@ -84,12 +85,15 @@
 	  <None Remove="Resources\Images\logo_dark.svg" />
 	  <None Remove="Resources\Images\logo_light.svg" />
 	  <None Remove="Resources\Images\meat_icon.svg" />
+	  <None Remove="Resources\Images\minus_icon.svg" />
 	  <None Remove="Resources\Images\moon_icon.svg" />
 	  <None Remove="Resources\Images\mushroom.png" />
+	  <None Remove="Resources\Images\orange.png" />
 	  <None Remove="Resources\Images\order_icon.svg" />
 	  <None Remove="Resources\Images\pawpaw.png" />
 	  <None Remove="Resources\Images\pear.png" />
 	  <None Remove="Resources\Images\pharmacy_icon.svg" />
+	  <None Remove="Resources\Images\plus_icon.svg" />
 	  <None Remove="Resources\Images\profile_icon.svg" />
 	  <None Remove="Resources\Images\right_arrow.svg" />
 	  <None Remove="Resources\Images\search_close_icon.svg" />
