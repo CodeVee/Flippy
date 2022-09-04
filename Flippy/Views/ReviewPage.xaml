@@ -10,17 +10,17 @@
             Padding="16,0"
             BackgroundColor="White"
             HeightRequest="50">
-            <Label             
+            <Label
                 FontSize="16"
                 HorizontalOptions="Center"
                 Style="{StaticResource DarkLabel}"
                 Text="Write a Review"
                 VerticalOptions="Center" />
             <ImageButton
-                HorizontalOptions="Start"
                 x:Name="CloseBtn"
                 Clicked="CloseBtn_Clicked"
                 HeightRequest="16"
+                HorizontalOptions="Start"
                 Source="arrow_back_dark.svg" />
         </Grid>
         <VerticalStackLayout
@@ -34,11 +34,11 @@
                 <Image Aspect="AspectFill" Source="user_avatar.png" />
             </Border>
             <Label
+                Margin="0,12,0,7"
                 FontSize="14"
                 HorizontalOptions="Center"
                 Style="{StaticResource DarkLabel}"
-                Text="William P. Martinez"
-                Margin="0, 12, 0, 7"/>
+                Text="William P. Martinez" />
             <HorizontalStackLayout HorizontalOptions="Center" Spacing="5">
                 <Image Source="star_full_icon.svg" WidthRequest="18" />
                 <Image Source="star_full_icon.svg" WidthRequest="18" />
@@ -53,10 +53,10 @@
                 Spacing="5">
                 <Border
                     Padding="25,5"
+                    HeightRequest="100"
                     Stroke="{StaticResource LightGrey}"
                     StrokeShape="RoundRectangle 10"
-                    StrokeThickness="1"
-                    HeightRequest="100">
+                    StrokeThickness="1">
                     <Editor BackgroundColor="Transparent" Placeholder="Write your review" />
                 </Border>
                 <Label

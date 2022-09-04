@@ -19,7 +19,7 @@
     </Shell.TitleView>
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem IconImageSource="bell_icon.svg" Clicked="ToolbarItem_Clicked" />
+        <ToolbarItem Clicked="ToolbarItem_Clicked" IconImageSource="bell_icon.svg" />
     </ContentPage.ToolbarItems>
     <ScrollView>
         <VerticalStackLayout Padding="15,15,15,20" Spacing="15">

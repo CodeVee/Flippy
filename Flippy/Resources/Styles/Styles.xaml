@@ -55,6 +55,7 @@
         BasedOn="{StaticResource BaseButton}"
         TargetType="Button">
         <Setter Property="BackgroundColor" Value="White" />
+        <Setter Property="BorderColor" Value="{StaticResource DeepBlue}" />
         <Setter Property="TextColor" Value="{StaticResource DarkBlue}" />
     </Style>
 

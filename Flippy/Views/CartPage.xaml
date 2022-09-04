@@ -10,6 +10,9 @@
     <ScrollView>
         <VerticalStackLayout Padding="15" Spacing="15">
             <Border StrokeShape="RoundRectangle 6">
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                </Border.GestureRecognizers>
                 <HorizontalStackLayout Padding="10,15">
                     <Image Source="orange.png" WidthRequest="67" />
                     <VerticalStackLayout Margin="16, 0, 25, 0">
