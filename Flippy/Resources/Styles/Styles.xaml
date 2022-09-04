@@ -56,7 +56,8 @@
         TargetType="Button">
         <Setter Property="BackgroundColor" Value="White" />
         <Setter Property="BorderColor" Value="{StaticResource DeepBlue}" />
-        <Setter Property="TextColor" Value="{StaticResource DarkBlue}" />
+        <Setter Property="BorderWidth" Value="1" />
+        <Setter Property="TextColor" Value="{StaticResource DeepBlue}" />
     </Style>
 
     <Style

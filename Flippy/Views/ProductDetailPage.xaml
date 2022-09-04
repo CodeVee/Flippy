@@ -158,8 +158,8 @@
                 Text="02 Customer Reviews" />
             <Border StrokeShape="RoundRectangle 6">
                 <VerticalStackLayout Padding="15" Spacing="10">
-                    <Grid ColumnDefinitions="15, *, Auto" ColumnSpacing="15">
-                        <Image Source="user_avatar.png" />
+                    <Grid ColumnDefinitions="30, *, Auto" ColumnSpacing="15">
+                        <Image Source="user_avatar.png" VerticalOptions="Start"/>
                         <VerticalStackLayout Grid.Column="1" Spacing="5">
                             <Label
                                 FontSize="14"
@@ -170,7 +170,7 @@
                                 Style="{StaticResource BlueLabel}"
                                 Text="1 day ago" />
                         </VerticalStackLayout>
-                        <HorizontalStackLayout HorizontalOptions="Center" Spacing="5">
+                        <HorizontalStackLayout HorizontalOptions="Center" Spacing="5" Grid.Column="2" VerticalOptions="Start">
                             <Image Source="star_full_icon.svg" WidthRequest="10" />
                             <Image Source="star_full_icon.svg" WidthRequest="10" />
                             <Image Source="star_full_icon.svg" WidthRequest="10" />
