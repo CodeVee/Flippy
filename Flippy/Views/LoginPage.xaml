@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Flippy.Views.LoginPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Login">
+    <VerticalStackLayout Padding="15,30">
+        <Image Margin="0,0,0,36" Source="logo_light.svg" />
+        <Label
+            Margin="0,0,0,26"
+            FontSize="22"
+            HorizontalOptions="Center"
+            Style="{StaticResource DarkLabel}"
+            Text="Welcome You!" />
+        <Grid
+            ColumnDefinitions="*, *"
+            RowDefinitions="*, Auto"
+            RowSpacing="15">
+            <Label
+                FontSize="16"
+                HorizontalOptions="Center"
+                Style="{StaticResource BlueLabel}"
+                Text="Login" />
+            <Label
+                Grid.Column="1"
+                FontSize="16"
+                HorizontalOptions="Center"
+                Style="{StaticResource GreyLabel}"
+                Text="Register" />
+            <BoxView
+                Grid.Row="1"
+                Grid.Column="0"
+                BackgroundColor="{StaticResource DeepBlue}"
+                HeightRequest="2" />
+            <BoxView
+                Grid.Row="1"
+                Grid.Column="1"
+                BackgroundColor="{StaticResource DarkBlue}"
+                HeightRequest="1"
+                Opacity="0.1" />
+        </Grid>
+        <VerticalStackLayout Margin="0,20,0,30" Spacing="14">
+            <Border StrokeShape="RoundRectangle 6">
+                <VerticalStackLayout Padding="10,10,10,0" BackgroundColor="White">
+                    <Label
+                        FontSize="10"
+                        Style="{StaticResource GreyLabel}"
+                        Text="User Name" />
+                    <Entry Style="{StaticResource MidEntry}" />
+                </VerticalStackLayout>
+            </Border>
+            <Border StrokeShape="RoundRectangle 6">
+                <VerticalStackLayout Padding="10,10,10,0" BackgroundColor="White">
+                    <Label
+                        FontSize="10"
+                        Style="{StaticResource GreyLabel}"
+                        Text="Password" />
+                    <Grid ColumnDefinitions="*, Auto">
+                        <Entry
+                            x:Name="passwordEntry"
+                            IsPassword="True"
+                            Style="{StaticResource MidEntry}" />
+                        <ImageButton
+                            Grid.Column="1"
+                            Padding="10,0"
+                            Clicked="TogglePasswordButton_Clicked"
+                            Source="hide.svg" />
+                    </Grid>
+                </VerticalStackLayout>
+            </Border>
+            <Grid ColumnDefinitions="*, *">
+                <HorizontalStackLayout Spacing="8">
+                    <CheckBox Color="{StaticResource DeepBlue}" />
+                    <Label
+                        FontSize="Small"
+                        Style="{StaticResource DarkLabel}"
+                        Text="Remember Me"
+                        VerticalOptions="Center" />
+                </HorizontalStackLayout>
+                <Button
+                    Grid.Column="1"
+                    Padding="0"
+                    BackgroundColor="Transparent"
+                    Clicked="ForgotButton_Clicked"
+                    HorizontalOptions="End"
+                    Text="Forgot Password?"
+                    TextColor="{StaticResource DeepBlue}" />
+            </Grid>
+        </VerticalStackLayout>
+        <Button
+            Clicked="LoginButton_Clicked"
+            Style="{StaticResource LightButton}"
+            Text="Login" />
+        <Button
+            Grid.Column="1"
+            Padding="0,10"
+            BackgroundColor="Transparent"
+            Clicked="RegisterButton_Clicked"
+            HorizontalOptions="Center"
+            Text="Don't have an  account? Sign Up!"
+            TextColor="{StaticResource DeepBlue}" />
+    </VerticalStackLayout>
+</ContentPage>

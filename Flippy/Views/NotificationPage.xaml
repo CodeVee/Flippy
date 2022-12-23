@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Flippy.Views.NotificationPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Notification">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="bell_icon.svg" />
+    </ContentPage.ToolbarItems>
+    <ScrollView>
+        <VerticalStackLayout Padding="15" Spacing="15">
+            <Grid>
+                <Label
+                    FontSize="16"
+                    Style="{StaticResource DarkLabel}"
+                    Text="Today" />
+                <HorizontalStackLayout
+                    HorizontalOptions="End"
+                    Spacing="5"
+                    VerticalOptions="Center">
+                    <Label
+                        FontSize="12"
+                        Style="{StaticResource BlueLabel}"
+                        Text="View All" />
+                    <Image Source="right_arrow.svg" />
+                </HorizontalStackLayout>
+            </Grid>
+            <Border HeightRequest="92" StrokeShape="RoundRectangle 6">
+                <Grid
+                    Padding="10,15"
+                    ColumnDefinitions="33, *"
+                    ColumnSpacing="10">
+                    <Grid HeightRequest="33" VerticalOptions="Start">
+                        <Border
+                            BackgroundColor="{StaticResource DeepBlue}"
+                            HeightRequest="33"
+                            Opacity="0.2"
+                            StrokeShape="Ellipse"
+                            VerticalOptions="Start" />
+                        <Image Source="bell_blue_icon.svg" VerticalOptions="Center" />
+                    </Grid>
+                    <VerticalStackLayout Grid.Column="1" Spacing="8">
+                        <Grid>
+                            <Label
+                                FontSize="16"
+                                Style="{StaticResource DarkLabel}"
+                                Text="Fresh Foods" />
+                            <Label
+                                FontSize="10"
+                                HorizontalOptions="End"
+                                Style="{StaticResource DarkLabel}"
+                                Text="Just Now"
+                                VerticalOptions="Center" />
+                        </Grid>
+                        <Label
+                            FontSize="14"
+                            Style="{StaticResource GreyLabel}"
+                            Text="27-29 June on selected Vegetables, FoodGrocery and Beverages." />
+                    </VerticalStackLayout>
+                </Grid>
+            </Border>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

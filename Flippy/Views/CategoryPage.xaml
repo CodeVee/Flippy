@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Flippy.Views.CategoryPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="CategoryPage">
+    <Shell.TitleView>
+        <Label
+            FontSize="16"
+            HorizontalOptions="Center"
+            Style="{StaticResource WhiteLabel}"
+            Text="All Categories"
+            VerticalOptions="Center" />
+    </Shell.TitleView>
+    <Grid
+        Padding="15"
+        ColumnDefinitions="*, *, *, *"
+        ColumnSpacing="9"
+        HeightRequest="360"
+        RowDefinitions="*, *, *"
+        RowSpacing="15"
+        VerticalOptions="Start">
+        <VerticalStackLayout Spacing="10">
+            <Border StrokeShape="Ellipse">
+                <FlexLayout HeightRequest="80" JustifyContent="Center">
+                    <Image Source="grocery_icon.svg" />
+                </FlexLayout>
+            </Border>
+            <Label
+                FontSize="10"
+                HorizontalOptions="Center"
+                Style="{StaticResource DarkLabel}"
+                Text="Grocery" />
+        </VerticalStackLayout>
+        <VerticalStackLayout Grid.Column="1" Spacing="10">
+            <Border StrokeShape="Ellipse">
+                <FlexLayout HeightRequest="80" JustifyContent="Center">
+                    <Image Source="beverage_icon.svg" />
+                </FlexLayout>
+            </Border>
+            <Label
+                FontSize="10"
+                HorizontalOptions="Center"
+                Style="{StaticResource DarkLabel}"
+                Text="Beverages" />
+        </VerticalStackLayout>
+        <VerticalStackLayout Grid.Column="2" Spacing="10">
+            <Border StrokeShape="Ellipse">
+                <FlexLayout HeightRequest="80" JustifyContent="Center">
+                    <Image Source="vegetable_icon.svg" />
+                </FlexLayout>
+            </Border>
+            <Label
+                FontSize="10"
+                HorizontalOptions="Center"
+                Style="{StaticResource DarkLabel}"
+                Text="Vegetables" />
+        </VerticalStackLayout>
+        <VerticalStackLayout Grid.Column="3" Spacing="10">
+            <Border StrokeShape="Ellipse">
+                <FlexLayout HeightRequest="80" JustifyContent="Center">
+                    <Image Source="fruit_icon.svg" />
+                </FlexLayout>
+            </Border>
+            <Label
+                FontSize="10"
+                HorizontalOptions="Center"
+                Style="{StaticResource DarkLabel}"
+                Text="Fruit" />
+        </VerticalStackLayout>
+        <VerticalStackLayout
+            Grid.Row="1"
+            Grid.Column="0"
+            Spacing="10">
+            <Border StrokeShape="Ellipse">
+                <FlexLayout HeightRequest="80" JustifyContent="Center">
+                    <Image Source="liqour_icon.svg" />
+                </FlexLayout>
+            </Border>
+            <Label
+                FontSize="10"
+                HorizontalOptions="Center"
+                Style="{StaticResource DarkLabel}"
+                Text="Liquor" />
+        </VerticalStackLayout>
+        <VerticalStackLayout
+            Grid.Row="1"
+            Grid.Column="1"
+            Spacing="10">
+            <Border StrokeShape="Ellipse">
+                <FlexLayout HeightRequest="80" JustifyContent="Center">
+                    <Image Source="cheese_icon.svg" />
+                </FlexLayout>
+            </Border>
+            <Label
+                FontSize="10"
+                HorizontalOptions="Center"
+                Style="{StaticResource DarkLabel}"
+                Text="Dairy" />
+        </VerticalStackLayout>
+        <VerticalStackLayout
+            Grid.Row="1"
+            Grid.Column="2"
+            Spacing="10">
+            <Border StrokeShape="Ellipse">
+                <FlexLayout HeightRequest="80" JustifyContent="Center">
+                    <Image Source="meat_icon.svg" />
+                </FlexLayout>
+            </Border>
+            <Label
+                FontSize="10"
+                HorizontalOptions="Center"
+                Style="{StaticResource DarkLabel}"
+                Text="Meat" />
+        </VerticalStackLayout>
+        <VerticalStackLayout
+            Grid.Row="1"
+            Grid.Column="3"
+            Spacing="10">
+            <Border StrokeShape="Ellipse">
+                <FlexLayout HeightRequest="80" JustifyContent="Center">
+                    <Image Source="pharmacy_icon.svg" />
+                </FlexLayout>
+            </Border>
+            <Label
+                FontSize="10"
+                HorizontalOptions="Center"
+                Style="{StaticResource DarkLabel}"
+                Text="Pharmacy" />
+        </VerticalStackLayout>
+        <VerticalStackLayout
+            Grid.Row="2"
+            Grid.Column="0"
+            Spacing="10">
+            <Border StrokeShape="Ellipse">
+                <FlexLayout HeightRequest="80" JustifyContent="Center">
+                    <Image Source="ice_cream_icon.svg" />
+                </FlexLayout>
+            </Border>
+            <Label
+                FontSize="10"
+                HorizontalOptions="Center"
+                Style="{StaticResource DarkLabel}"
+                Text="Frozen Food" />
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>

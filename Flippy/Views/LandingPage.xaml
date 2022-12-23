@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Flippy.Views.LandingPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:model="clr-namespace:Flippy.Models"
+    Title="LandingPage"
+    Shell.NavBarIsVisible="False">
+    <Grid RowDefinitions="160, Auto, *">
+        <Image
+            x:Name="logo"
+            Margin="0,48,0,46"
+            Source="logo_light.svg" />
+        <CarouselView
+            x:Name="carousel"
+            Grid.Row="1"
+            IndicatorView="indicatorView"
+            Loop="False"
+            PositionChanged="OnPositionChanged">
+            <CarouselView.ItemsSource>
+                <x:Array Type="{x:Type model:Landing}">
+                    <model:Landing
+                        Header="Choose Item Online"
+                        ImageSource="shopper_cart.svg"
+                        Message="Plan your trip, choose your destination.Pick the best place for your holiday." />
+                    <model:Landing
+                        Header="Payment Online"
+                        ImageSource="shopper_pay.svg"
+                        Message="Plan your trip, choose your destination.Pick the best place for your holiday." />
+                    <model:Landing
+                        Header="Get Your Order"
+                        ImageSource="shopper_bag.svg"
+                        Message="Plan your trip, choose your destination.Pick the best place for your holiday." />
+                </x:Array>
+            </CarouselView.ItemsSource>
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <VerticalStackLayout>
+                        <HorizontalStackLayout Margin="0,0,0,75" HeightRequest="335">
+                            <Image
+                                x:Name="imgCarousel"
+                                Aspect="Fill"
+                                Source="{Binding ImageSource}"
+                                VerticalOptions="EndAndExpand" />
+                        </HorizontalStackLayout>
+                        <Label
+                            Margin="0,19"
+                            FontSize="22"
+                            HorizontalOptions="Center"
+                            Style="{StaticResource DarkLabel}"
+                            Text="{Binding Header}" />
+                        <Label
+                            Padding="80,0"
+                            FontSize="14"
+                            HorizontalOptions="Center"
+                            HorizontalTextAlignment="Center"
+                            Style="{StaticResource GreyLabel}"
+                            Text="{Binding Message}" />
+                    </VerticalStackLayout>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+        <FlexLayout
+            x:Name="footer"
+            Grid.Row="2"
+            Margin="30,45,30,0"
+            AlignItems="Center"
+            JustifyContent="SpaceBetween">
+            <Button
+                Padding="10"
+                BackgroundColor="Transparent"
+                Clicked="OnSkipButton_Clicked"
+                Text="SKIP"
+                TextColor="{StaticResource DarkGrey}" />
+            <IndicatorView
+                x:Name="indicatorView"
+                IndicatorColor="#2737734d"
+                IndicatorSize="10"
+                SelectedIndicatorColor="{StaticResource DeepBlue}" />
+            <Button
+                Padding="10"
+                BackgroundColor="Transparent"
+                Clicked="OnNextButton_Clicked"
+                Text="NEXT"
+                TextColor="{StaticResource DeepBlue}" />
+        </FlexLayout>
+        <Button
+            x:Name="startBtn"
+            Grid.Row="2"
+            Clicked="OnStartBtn_Clicked"
+            IsVisible="false"
+            Style="{StaticResource LightButton}"
+            Text="Get Started" />
+    </Grid>
+</ContentPage>

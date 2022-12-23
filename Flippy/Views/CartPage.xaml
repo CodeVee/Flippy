@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Flippy.Views.CartPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="My Cart">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="bell_icon.svg" />
+    </ContentPage.ToolbarItems>
+    <ScrollView>
+        <VerticalStackLayout Padding="15" Spacing="15">
+            <Border StrokeShape="RoundRectangle 6">
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                </Border.GestureRecognizers>
+                <HorizontalStackLayout Padding="10,15">
+                    <Image Source="orange.png" WidthRequest="67" />
+                    <VerticalStackLayout Margin="16, 0, 25, 0">
+                        <Label
+                            FontSize="16"
+                            Style="{StaticResource DarkLabel}"
+                            Text="Orange Imported" />
+                        <HorizontalStackLayout Margin="0,6,0,10">
+                            <Label
+                                FontSize="10"
+                                Style="{StaticResource DarkLabel}"
+                                Text="Unit Price" VerticalOptions="Center" />
+                            <Label
+                                FontSize="12"
+                                Style="{StaticResource DarkLabel}"
+                                Text=": Rs. 1400.00" FontFamily="LatoBold" />
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout>
+                            <ImageButton Source="minus_icon.svg" />
+                            <Label
+                                Margin="9,0"
+                                FontSize="10"
+                                Style="{StaticResource DarkLabel}"
+                                Text="02 kg" VerticalOptions="Center"/>
+                            <ImageButton Source="plus_icon.svg" />
+                            <Button
+                                Margin="15,0"
+                                Style="{StaticResource SelectButton}"
+                                Text="2800.00" />
+                        </HorizontalStackLayout>
+                    </VerticalStackLayout>
+                    <HorizontalStackLayout Spacing="10.5" VerticalOptions="Start">
+                        <ImageButton Source="heart_full_icon.svg" />
+                        <ImageButton Source="cart_delete_icon.svg" />
+                    </HorizontalStackLayout>
+                </HorizontalStackLayout>
+            </Border>
+            <Border StrokeShape="RoundRectangle 6">
+                <HorizontalStackLayout Padding="10,15">
+                    <Image Source="cucumber.png" WidthRequest="67" />
+                    <VerticalStackLayout Margin="16, 0, 25, 0">
+                        <Label
+                            FontSize="16"
+                            Style="{StaticResource DarkLabel}"
+                            Text="Salad Cucumber" />
+                        <HorizontalStackLayout Margin="0,6,0,10">
+                            <Label
+                                FontSize="10"
+                                Style="{StaticResource DarkLabel}"
+                                Text="Unit Price" VerticalOptions="Center" />
+                            <Label
+                                FontSize="12"
+                                Style="{StaticResource DarkLabel}"
+                                Text=": Rs. 1400.00" FontFamily="LatoBold" />
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout>
+                            <ImageButton Source="minus_icon.svg" />
+                            <Label
+                                Margin="9,0"
+                                FontSize="10"
+                                Style="{StaticResource DarkLabel}"
+                                Text="02 kg" VerticalOptions="Center"/>
+                            <ImageButton Source="plus_icon.svg" />
+                            <Button
+                                Margin="15,0"
+                                Style="{StaticResource SelectButton}"
+                                Text="2800.00" />
+                        </HorizontalStackLayout>
+                    </VerticalStackLayout>
+                    <HorizontalStackLayout Spacing="10.5" VerticalOptions="Start">
+                        <ImageButton Source="heart_full_icon.svg" />
+                        <ImageButton Source="cart_delete_icon.svg" />
+                    </HorizontalStackLayout>
+                </HorizontalStackLayout>
+            </Border>
+            <Border StrokeShape="RoundRectangle 6">
+                <HorizontalStackLayout Padding="10,15">
+                    <Image Source="watermelon.png" WidthRequest="67" />
+                    <VerticalStackLayout Margin="16, 0, 25, 0">
+                        <Label
+                            FontSize="16"
+                            Style="{StaticResource DarkLabel}"
+                            Text="Watermelon" />
+                        <HorizontalStackLayout Margin="0,6,0,10">
+                            <Label
+                                FontSize="10"
+                                Style="{StaticResource DarkLabel}"
+                                Text="Unit Price" VerticalOptions="Center" />
+                            <Label
+                                FontSize="12"
+                                Style="{StaticResource DarkLabel}"
+                                Text=": Rs. 1400.00" FontFamily="LatoBold" />
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout>
+                            <ImageButton Source="minus_icon.svg" />
+                            <Label
+                                Margin="9,0"
+                                FontSize="10"
+                                Style="{StaticResource DarkLabel}"
+                                Text="02 kg" VerticalOptions="Center"/>
+                            <ImageButton Source="plus_icon.svg" />
+                            <Button
+                                Margin="15,0"
+                                Style="{StaticResource SelectButton}"
+                                Text="2800.00" />
+                        </HorizontalStackLayout>
+                    </VerticalStackLayout>
+                    <HorizontalStackLayout Spacing="10.5" VerticalOptions="Start">
+                        <ImageButton Source="heart_full_icon.svg" />
+                        <ImageButton Source="cart_delete_icon.svg" />
+                    </HorizontalStackLayout>
+                </HorizontalStackLayout>
+            </Border>
+            <Border Padding="15" StrokeShape="RoundRectangle 6">
+                <Grid ColumnDefinitions="*, 130" HeightRequest="40">
+                    <Border
+                        Padding="20,0"
+                        Stroke="{StaticResource LightGrey}"
+                        StrokeShape="RoundRectangle 20, 0, 20, 0"
+                        StrokeThickness="1">
+                        <Entry Style="{StaticResource MidEntry}" />
+                    </Border>
+                    <Border
+                        Grid.Column="1"
+                        Margin="-3.5,0,0,0"
+                        StrokeShape="RoundRectangle 0, 20, 0, 20">
+                        <Grid>
+                            <Button
+                                BackgroundColor="{StaticResource DeepBlue}"
+                                FontSize="14" FontFamily="LatoRegular"
+                                Text="Apply Coupon" />
+                        </Grid>
+
+                    </Border>
+
+                </Grid>
+            </Border>
+            <Label
+                FontSize="16"
+                Style="{StaticResource DarkLabel}"
+                Text="Price Details" />
+            <Border StrokeShape="RoundRectangle 6">
+                <VerticalStackLayout Padding="15">
+                    <Grid>
+                        <Label
+                            FontSize="14"
+                            Style="{StaticResource GreyLabel}"
+                            Text="Price (3 items)" />
+                        <Label
+                            FontSize="14"
+                            HorizontalOptions="End"
+                            Style="{StaticResource GreyLabel}"
+                            Text="Rs. 8,400.00" />
+                    </Grid>
+                    <Grid Margin="0,15,0,30">
+                        <Label
+                            FontSize="14"
+                            Style="{StaticResource GreyLabel}"
+                            Text="Delivery Fee" />
+                        <Label
+                            FontSize="14"
+                            HorizontalOptions="End"
+                            Style="{StaticResource BlueLabel}"
+                            Text="Free" />
+                    </Grid>
+                    <Grid>
+                        <Label
+                            FontSize="14"
+                            Style="{StaticResource DarkLabel}"
+                            Text="Total Amount" />
+                        <Label
+                            FontSize="14"
+                            HorizontalOptions="End"
+                            Style="{StaticResource DarkLabel}"
+                            Text="Rs. 8,400.00" />
+                    </Grid>
+                </VerticalStackLayout>
+            </Border>
+            <Button
+                Margin="0,15"
+                Style="{StaticResource LightButton}"
+                Text="Place Order" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

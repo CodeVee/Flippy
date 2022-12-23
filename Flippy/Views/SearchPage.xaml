@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Flippy.Views.SearchPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Search">
+    <Shell.TitleView>
+        <Label
+            FontSize="16"
+            HorizontalOptions="Center"
+            Style="{StaticResource WhiteLabel}"
+            Text="Search"
+            VerticalOptions="Center" />
+    </Shell.TitleView>
+    <VerticalStackLayout>
+        <Grid Padding="15" BackgroundColor="{StaticResource DeepBlue}">
+            <Border StrokeShape="RoundRectangle 30">
+                <Grid
+                    Padding="25,8"
+                    ColumnDefinitions="Auto, *, Auto"
+                    ColumnSpacing="10">
+                    <Image Source="search_icon.svg" />
+                    <Entry
+                        x:Name="searchEntry"
+                        Grid.Column="1"
+                        Style="{StaticResource MidEntry}"
+                        TextChanged="SearchEntry_TextChanged" />
+                    <ImageButton
+                        x:Name="clearBtn"
+                        Grid.Column="2"
+                        Clicked="ClearBtn_Clicked"
+                        IsVisible="false"
+                        Source="search_close_icon.svg" />
+                </Grid>
+            </Border>
+        </Grid>
+        <ScrollView>
+            <VerticalStackLayout Padding="15" Spacing="15">
+                <VerticalStackLayout Spacing="15">
+                    <Grid>
+                        <Label
+                            FontSize="14"
+                            Style="{StaticResource DarkLabel}"
+                            Text="Food" />
+                    </Grid>
+                    <BoxView BackgroundColor="{StaticResource LightGrey}" HeightRequest="1" />
+                </VerticalStackLayout>
+                <VerticalStackLayout Spacing="15">
+                    <Grid>
+                        <Label
+                            FontSize="14"
+                            Style="{StaticResource DarkLabel}"
+                            Text="Food and Fruits" />
+                        <Image
+                            Margin="16,0"
+                            HorizontalOptions="End"
+                            Source="tick_icon.svg" />
+                    </Grid>
+                    <BoxView BackgroundColor="{StaticResource LightGrey}" HeightRequest="1" />
+                </VerticalStackLayout>
+                <VerticalStackLayout Spacing="15">
+                    <Grid>
+                        <Label
+                            FontSize="14"
+                            Style="{StaticResource DarkLabel}"
+                            Text="Frozen Food" />
+                    </Grid>
+                    <BoxView BackgroundColor="{StaticResource LightGrey}" HeightRequest="1" />
+                </VerticalStackLayout>
+            </VerticalStackLayout>
+        </ScrollView>
+    </VerticalStackLayout>
+</ContentPage>

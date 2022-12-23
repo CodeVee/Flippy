@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Flippy.Views.AddressPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <Shell.TitleView>
+        <Label
+            FontSize="16"
+            HorizontalOptions="Center"
+            Style="{StaticResource WhiteLabel}"
+            Text="Address"
+            VerticalOptions="Center" />
+    </Shell.TitleView>
+
+    <ScrollView>
+        <Grid
+            Padding="15"
+            RowDefinitions="Auto, *, Auto"
+            RowSpacing="20">
+            <Label
+                FontSize="22"
+                Style="{StaticResource BlueLabel}"
+                Text="+ Add a new address">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                </Label.GestureRecognizers>
+            </Label>
+            <VerticalStackLayout Grid.Row="1" Spacing="20">
+                <Border Grid.Row="1" StrokeShape="RoundRectangle 10">
+                    <Grid
+                        Padding="10"
+                        ColumnDefinitions="14, *, Auto"
+                        ColumnSpacing="10"
+                        HeightRequest="100">
+                        <Border
+                            HeightRequest="14"
+                            Opacity="0.2"
+                            Stroke="{StaticResource DarkBlue}"
+                            StrokeShape="Ellipse"
+                            StrokeThickness="1"
+                            VerticalOptions="Start">
+                            <Ellipse
+                                Fill="{StaticResource DarkBlue}"
+                                HeightRequest="6"
+                                WidthRequest="6" />
+                        </Border>
+                        <VerticalStackLayout Grid.Column="1" Spacing="10">
+                            <Label
+                                FontSize="10"
+                                Style="{StaticResource GreyLabel}"
+                                Text="Billing Address" />
+                            <Label
+                                FontSize="14"
+                                Style="{StaticResource BlueLabel}"
+                                Text="William P. Martinez" />
+                            <Label
+                                FontSize="12"
+                                Style="{StaticResource GreyLabel}"
+                                Text="4173 Maple Avenue Boise,ID 83702" />
+                        </VerticalStackLayout>
+                        <ImageButton
+                            Grid.Column="2"
+                            Source="edit_icon.svg"
+                            VerticalOptions="Start" />
+                    </Grid>
+                </Border>
+                <Border Grid.Row="1" StrokeShape="RoundRectangle 10">
+                    <Grid
+                        Padding="10"
+                        ColumnDefinitions="14, *, Auto"
+                        ColumnSpacing="10"
+                        HeightRequest="100">
+                        <Border
+                            HeightRequest="14"
+                            Stroke="{StaticResource DeepBlue}"
+                            StrokeShape="Ellipse"
+                            StrokeThickness="1"
+                            VerticalOptions="Start">
+                            <Ellipse
+                                Fill="{StaticResource DeepBlue}"
+                                HeightRequest="6"
+                                WidthRequest="6" />
+                        </Border>
+                        <VerticalStackLayout Grid.Column="1" Spacing="10">
+                            <Label
+                                FontSize="10"
+                                Style="{StaticResource GreyLabel}"
+                                Text="Billing Address" />
+                            <Label
+                                FontSize="14"
+                                Style="{StaticResource BlueLabel}"
+                                Text="Diana J. Lopez" />
+                            <Label
+                                FontSize="12"
+                                Style="{StaticResource GreyLabel}"
+                                Text="4173 Maple Avenue Boise,ID 83702" />
+                        </VerticalStackLayout>
+                        <ImageButton
+                            Grid.Column="2"
+                            Source="edit_icon.svg"
+                            VerticalOptions="Start" />
+                    </Grid>
+                </Border>
+            </VerticalStackLayout>
+
+            <Button
+                Grid.Row="2"
+                Style="{StaticResource LightButton}"
+                Text="Deliver Here" />
+        </Grid>
+    </ScrollView>
+
+</ContentPage>

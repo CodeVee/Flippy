@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Flippy.Views.OrderPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="My Order">
+    <ScrollView>
+        <VerticalStackLayout Padding="15" Spacing="15">
+            <Border StrokeShape="RoundRectangle 6">
+                <VerticalStackLayout>
+                    <VerticalStackLayout Padding="10">
+                        <Label
+                            FontSize="10"
+                            Style="{StaticResource GreyLabel}"
+                            Text="Grocery Items" />
+                        <Label
+                            Margin="0,9,0,7"
+                            FontSize="14"
+                            Style="{StaticResource DarkLabel}"
+                            Text="William P. Martinez" />
+                        <HorizontalStackLayout Margin="0,0,0,6" Spacing="6">
+                            <Ellipse
+                                Fill="{StaticResource LightGreen}"
+                                HeightRequest="10"
+                                WidthRequest="10" />
+                            <Label
+                                FontSize="12"
+                                Style="{StaticResource GreyLabel}"
+                                Text="Delivered on Feb 12, 2021" />
+                        </HorizontalStackLayout>
+                    </VerticalStackLayout>
+                    <BoxView BackgroundColor="{StaticResource LightGrey}" HeightRequest="1" />
+                    <Grid Padding="10,12,16,14" ColumnDefinitions="*, Auto">
+                        <HorizontalStackLayout Spacing="5">
+                            <Image Source="star_full_icon.svg" />
+                            <Image Source="star_full_icon.svg" />
+                            <Image Source="star_full_icon.svg" />
+                            <Image Source="star_full_icon.svg" />
+                            <Image Source="star_empty_icon.svg" />
+                        </HorizontalStackLayout>
+                        <Label
+                            Grid.Column="1"
+                            FontSize="10"
+                            Style="{StaticResource BlueLabel}"
+                            Text="Write a Review">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </Grid>
+                </VerticalStackLayout>
+            </Border>
+            <Border StrokeShape="RoundRectangle 6">
+                <VerticalStackLayout>
+                    <VerticalStackLayout Padding="10">
+                        <Label
+                            FontSize="10"
+                            Style="{StaticResource GreyLabel}"
+                            Text="Grocery Items" />
+                        <Label
+                            Margin="0,9,0,7"
+                            FontSize="14"
+                            Style="{StaticResource DarkLabel}"
+                            Text="William P. Martinez" />
+                        <HorizontalStackLayout Margin="0,0,0,6" Spacing="6">
+                            <Ellipse
+                                Fill="{StaticResource LightGreen}"
+                                HeightRequest="10"
+                                WidthRequest="10" />
+                            <Label
+                                FontSize="12"
+                                Style="{StaticResource GreyLabel}"
+                                Text="Delivered on Feb 12, 2021" />
+                        </HorizontalStackLayout>
+                    </VerticalStackLayout>
+                    <BoxView BackgroundColor="{StaticResource LightGrey}" HeightRequest="1" />
+                    <Grid Padding="10,12,16,14" ColumnDefinitions="*, Auto">
+                        <HorizontalStackLayout Spacing="5">
+                            <Image Source="star_full_icon.svg" />
+                            <Image Source="star_full_icon.svg" />
+                            <Image Source="star_full_icon.svg" />
+                            <Image Source="star_full_icon.svg" />
+                            <Image Source="star_empty_icon.svg" />
+                        </HorizontalStackLayout>
+                        <Label
+                            Grid.Column="1"
+                            FontSize="10"
+                            Style="{StaticResource BlueLabel}"
+                            Text="Write a Review">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </Grid>
+                </VerticalStackLayout>
+            </Border>
+            <Border StrokeShape="RoundRectangle 6">
+                <VerticalStackLayout>
+                    <VerticalStackLayout Padding="10">
+                        <Label
+                            FontSize="10"
+                            Style="{StaticResource GreyLabel}"
+                            Text="Grocery Items" />
+                        <Label
+                            Margin="0,9,0,7"
+                            FontSize="14"
+                            Style="{StaticResource DarkLabel}"
+                            Text="William P. Martinez" />
+                        <HorizontalStackLayout Margin="0,0,0,6" Spacing="6">
+                            <Ellipse
+                                Fill="{StaticResource LightGreen}"
+                                HeightRequest="10"
+                                WidthRequest="10" />
+                            <Label
+                                FontSize="12"
+                                Style="{StaticResource GreyLabel}"
+                                Text="Delivered on Feb 12, 2021" />
+                        </HorizontalStackLayout>
+                    </VerticalStackLayout>
+                    <BoxView BackgroundColor="{StaticResource LightGrey}" HeightRequest="1" />
+                    <Grid Padding="10,12,16,14" ColumnDefinitions="*, Auto">
+                        <HorizontalStackLayout Spacing="5">
+                            <Image Source="star_full_icon.svg" />
+                            <Image Source="star_full_icon.svg" />
+                            <Image Source="star_full_icon.svg" />
+                            <Image Source="star_full_icon.svg" />
+                            <Image Source="star_empty_icon.svg" />
+                        </HorizontalStackLayout>
+                        <Label
+                            Grid.Column="1"
+                            FontSize="10"
+                            Style="{StaticResource BlueLabel}"
+                            Text="Write a Review">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </Grid>
+                </VerticalStackLayout>
+            </Border>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

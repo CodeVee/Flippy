@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Flippy.Views.BlogPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Blog">
+    <ScrollView>
+        <VerticalStackLayout Padding="15" Spacing="15">
+            <Border StrokeShape="ROundRectangle 0, 0, 10, 10">
+                <VerticalStackLayout>
+                    <Image
+                        Aspect="AspectFill"
+                        HeightRequest="180"
+                        Source="https://atlantablackstar.com/wp-content/uploads/2013/10/Black-child.jpg" />
+                    <VerticalStackLayout Padding="9,20,9,30" Spacing="15">
+                        <Label
+                            FontSize="14"
+                            HorizontalOptions="Center"
+                            Style="{StaticResource DarkLabel}"
+                            Text="This is Our First Post!" />
+                        <Label
+                            FontSize="13.2"
+                            HorizontalTextAlignment="Center"
+                            Style="{StaticResource GreyLabel}"
+                            Text="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum." />
+                    </VerticalStackLayout>
+                </VerticalStackLayout>
+            </Border>
+            <Border StrokeShape="ROundRectangle 0, 0, 10, 10">
+                <VerticalStackLayout>
+                    <Image
+                        Aspect="AspectFill"
+                        HeightRequest="180"
+                        Source="https://www.fiac.org.uk/wp-content/uploads/2021/07/fiac-elderly-people.jpg" />
+                    <VerticalStackLayout Padding="9,20,9,30" Spacing="15">
+                        <Label
+                            FontSize="14"
+                            HorizontalOptions="Center"
+                            Style="{StaticResource DarkLabel}"
+                            Text="This is Our Second Post!" />
+                        <Label
+                            FontSize="13.2"
+                            HorizontalTextAlignment="Center"
+                            Style="{StaticResource GreyLabel}"
+                            Text="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum." />
+                    </VerticalStackLayout>
+                </VerticalStackLayout>
+            </Border>
+            <Border StrokeShape="ROundRectangle 0, 0, 10, 10">
+                <VerticalStackLayout>
+                    <Image
+                        Aspect="AspectFill"
+                        HeightRequest="180"
+                        Source="https://cdn7.dissolve.com/p/D430_35_159/D430_35_159_1200.jpg" />
+                    <VerticalStackLayout Padding="9,20,9,30" Spacing="15">
+                        <Label
+                            FontSize="14"
+                            HorizontalOptions="Center"
+                            Style="{StaticResource DarkLabel}"
+                            Text="This is Our Third Post!" />
+                        <Label
+                            FontSize="13.2"
+                            HorizontalTextAlignment="Center"
+                            Style="{StaticResource GreyLabel}"
+                            Text="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum." />
+                    </VerticalStackLayout>
+                </VerticalStackLayout>
+            </Border>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

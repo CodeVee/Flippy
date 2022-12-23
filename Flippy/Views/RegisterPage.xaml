@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Flippy.Views.RegisterPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Register">
+    <VerticalStackLayout Padding="15,30">
+        <Image Margin="0,0,0,36" Source="logo_light.svg" />
+        <Label
+            Margin="0,0,0,26"
+            FontSize="22"
+            HorizontalOptions="Center"
+            Style="{StaticResource DarkLabel}"
+            Text="Register Now!" />
+        <Grid
+            ColumnDefinitions="*, *"
+            RowDefinitions="*, Auto"
+            RowSpacing="15">
+            <Label
+                FontSize="16"
+                HorizontalOptions="Center"
+                Style="{StaticResource GreyLabel}"
+                Text="Login" />
+            <Label
+                Grid.Column="1"
+                FontSize="16"
+                HorizontalOptions="Center"
+                Style="{StaticResource BlueLabel}"
+                Text="Register" />
+            <BoxView
+                Grid.Row="1"
+                Grid.Column="1"
+                BackgroundColor="{StaticResource DeepBlue}"
+                HeightRequest="2" />
+            <BoxView
+                Grid.Row="1"
+                Grid.Column="0"
+                BackgroundColor="{StaticResource DarkBlue}"
+                HeightRequest="1"
+                Opacity="0.1" />
+        </Grid>
+        <VerticalStackLayout Margin="0,20,0,30" Spacing="14">
+            <Border StrokeShape="RoundRectangle 6">
+                <VerticalStackLayout Padding="10,10,10,0" BackgroundColor="White">
+                    <Label
+                        FontSize="10"
+                        Style="{StaticResource GreyLabel}"
+                        Text="Name" />
+                    <Entry BackgroundColor="Transparent" Style="{StaticResource MidEntry}" />
+                </VerticalStackLayout>
+            </Border>
+            <Border StrokeShape="RoundRectangle 6">
+                <VerticalStackLayout Padding="10,10,10,0" BackgroundColor="White">
+                    <Label
+                        FontSize="10"
+                        Style="{StaticResource GreyLabel}"
+                        Text="Email" />
+                    <Entry BackgroundColor="Transparent" Style="{StaticResource MidEntry}" />
+                </VerticalStackLayout>
+            </Border>
+            <Border StrokeShape="RoundRectangle 6">
+                <VerticalStackLayout Padding="10,10,10,0" BackgroundColor="White">
+                    <Label
+                        FontSize="10"
+                        Style="{StaticResource GreyLabel}"
+                        Text="Password" />
+                    <Entry
+                        BackgroundColor="Transparent"
+                        IsPassword="True"
+                        Style="{StaticResource MidEntry}" />
+                </VerticalStackLayout>
+            </Border>
+            <Button
+                Grid.Column="1"
+                Padding="0"
+                BackgroundColor="Transparent"
+                Clicked="LoginButton_Clicked"
+                HorizontalOptions="End"
+                Text="Already have an  account?"
+                TextColor="{StaticResource DeepBlue}" />
+        </VerticalStackLayout>
+        <Button Style="{StaticResource LightButton}" Text="Register" />
+    </VerticalStackLayout>
+</ContentPage>

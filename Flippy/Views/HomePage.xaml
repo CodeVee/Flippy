@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Flippy.Views.HomePage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:model="clr-namespace:Flippy.Models"
+    Title="Home">
+    <Shell.TitleView>
+        <Grid ColumnDefinitions="Auto, *">
+            <Image Source="hamburger_icon.svg" VerticalOptions="Center" />
+            <Label
+                Grid.Column="1"
+                FontSize="Header"
+                HorizontalOptions="Center"
+                Style="{StaticResource WhiteLabel}"
+                Text="Home"
+                VerticalOptions="Center" />
+        </Grid>
+    </Shell.TitleView>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Clicked="ToolbarItem_Clicked" IconImageSource="bell_icon.svg" />
+    </ContentPage.ToolbarItems>
+    <ScrollView>
+        <VerticalStackLayout Padding="15,15,15,20" Spacing="15">
+            <Image Aspect="AspectFill" Source="home_cart.png" />
+            <Grid ColumnDefinitions="*, Auto">
+                <Label
+                    FontSize="16"
+                    Style="{StaticResource DarkLabel}"
+                    Text="All Categories" />
+                <HorizontalStackLayout Grid.Column="1">
+                    <Button
+                        Clicked="AllButton_Clicked"
+                        Style="{StaticResource LinkButton}"
+                        Text="View All" />
+                    <Image Source="right_arrow.svg" />
+                </HorizontalStackLayout>
+            </Grid>
+            <Grid ColumnDefinitions="*, *, *, *" ColumnSpacing="9">
+                <VerticalStackLayout Spacing="10">
+                    <Border StrokeShape="Ellipse">
+                        <FlexLayout HeightRequest="80" JustifyContent="Center">
+                            <Image Source="grocery_icon.svg" />
+                        </FlexLayout>
+                    </Border>
+                    <Label
+                        FontSize="10"
+                        HorizontalOptions="Center"
+                        Style="{StaticResource DarkLabel}"
+                        Text="Grocery" />
+                </VerticalStackLayout>
+                <VerticalStackLayout Grid.Column="1" Spacing="10">
+                    <Border StrokeShape="Ellipse">
+                        <FlexLayout HeightRequest="80" JustifyContent="Center">
+                            <Image Source="beverage_icon.svg" />
+                        </FlexLayout>
+                    </Border>
+                    <Label
+                        FontSize="10"
+                        HorizontalOptions="Center"
+                        Style="{StaticResource DarkLabel}"
+                        Text="Beverages" />
+                </VerticalStackLayout>
+                <VerticalStackLayout Grid.Column="2" Spacing="10">
+                    <Border StrokeShape="Ellipse">
+                        <FlexLayout HeightRequest="80" JustifyContent="Center">
+                            <Image Source="vegetable_icon.svg" />
+                        </FlexLayout>
+                    </Border>
+                    <Label
+                        FontSize="10"
+                        HorizontalOptions="Center"
+                        Style="{StaticResource DarkLabel}"
+                        Text="Vegetables" />
+                </VerticalStackLayout>
+                <VerticalStackLayout Grid.Column="3" Spacing="10">
+                    <Border StrokeShape="Ellipse">
+                        <FlexLayout HeightRequest="80" JustifyContent="Center">
+                            <Image Source="fruit_icon.svg" />
+                        </FlexLayout>
+                    </Border>
+                    <Label
+                        FontSize="10"
+                        HorizontalOptions="Center"
+                        Style="{StaticResource DarkLabel}"
+                        Text="Fruit" />
+                </VerticalStackLayout>
+            </Grid>
+            <Grid Margin="0,15,0,0" ColumnDefinitions="*, Auto">
+                <Label
+                    FontSize="16"
+                    Style="{StaticResource DarkLabel}"
+                    Text="Best Sellers" />
+                <HorizontalStackLayout Grid.Column="1">
+                    <Button
+                        Clicked="BestSellerButton_Clicked"
+                        Style="{StaticResource LinkButton}"
+                        Text="View All" />
+                    <Image Source="right_arrow.svg" />
+                </HorizontalStackLayout>
+            </Grid>
+            <CollectionView>
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout ItemSpacing="10" Orientation="Horizontal" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemsSource>
+                    <x:Array Type="{x:Type model:Product}">
+                        <model:Product
+                            Name="Mushrooms"
+                            ImageSource="mushroom.png"
+                            Price="150"
+                            Weight="1KG" />
+                        <model:Product
+                            Name="Cauliflowers"
+                            ImageSource="cauliflower.png"
+                            Price="300"
+                            Weight="2KG" />
+                        <model:Product
+                            Name="Cucumbers"
+                            ImageSource="cucumber.png"
+                            Price="250"
+                            Weight="5KG" />
+                        <model:Product
+                            Name="Carrots"
+                            ImageSource="https://freshpointlocal.co.uk/wp-content/uploads/2018/08/BunchCarrots-800x800.jpg"
+                            Price="130"
+                            Weight="3.5KG" />
+                    </x:Array>
+                </CollectionView.ItemsSource>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <VerticalStackLayout Spacing="8" WidthRequest="120">
+                            <Border StrokeShape="RoundRectangle 10">
+                                <VerticalStackLayout Padding="10" Spacing="6">
+                                    <Grid ColumnDefinitions="*, Auto">
+                                        <Border
+                                            Padding="5,1"
+                                            BackgroundColor="{StaticResource DarkBlue}"
+                                            HorizontalOptions="Start"
+                                            Opacity="0.5"
+                                            StrokeShape="RoundRectangle 10">
+                                            <Label
+                                                FontSize="10"
+                                                Style="{StaticResource WhiteLabel}"
+                                                Text="{Binding Weight}" />
+                                        </Border>
+                                        <Image Grid.Column="1" Source="heart_icon.svg" />
+                                    </Grid>
+                                    <Image
+                                        Aspect="AspectFill"
+                                        HeightRequest="90"
+                                        IsOpaque="True"
+                                        Source="{Binding ImageSource}" />
+                                </VerticalStackLayout>
+                            </Border>
+                            <Grid
+                                ColumnDefinitions="*, Auto"
+                                RowDefinitions="*, Auto"
+                                RowSpacing="5">
+                                <Label
+                                    Grid.ColumnSpan="2"
+                                    FontSize="10"
+                                    Style="{StaticResource GreyLabel}"
+                                    Text="{Binding Name}" />
+                                <Label
+                                    Grid.Row="1"
+                                    Grid.Column="0"
+                                    FontSize="12"
+                                    Style="{StaticResource DarkLabel}"
+                                    Text="{Binding Price, StringFormat='{0:C}'}"
+                                    VerticalOptions="Center" />
+                                <Button
+                                    Grid.Row="1"
+                                    Grid.Column="1"
+                                    Style="{StaticResource SelectButton}"
+                                    Text="Add" />
+                            </Grid>
+
+                        </VerticalStackLayout>
+
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <Grid Margin="0,15,0,0" ColumnDefinitions="*, Auto">
+                <Label
+                    FontSize="16"
+                    Style="{StaticResource DarkLabel}"
+                    Text="Fruits" />
+                <HorizontalStackLayout Grid.Column="1">
+                    <Button
+                        Clicked="FruitButton_Clicked"
+                        Style="{StaticResource LinkButton}"
+                        Text="View All" />
+                    <Image Source="right_arrow.svg" />
+                </HorizontalStackLayout>
+            </Grid>
+            <CollectionView>
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout ItemSpacing="10" Orientation="Horizontal" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemsSource>
+                    <x:Array Type="{x:Type model:Product}">
+                        <model:Product
+                            Name="Apples"
+                            ImageSource="apple.png"
+                            Price="50"
+                            Weight="10KG" />
+                        <model:Product
+                            Name="Pears"
+                            ImageSource="pear.png"
+                            Price="130"
+                            Weight="7KG" />
+                        <model:Product
+                            Name="Paw Paw"
+                            ImageSource="pawpaw.png"
+                            Price="410"
+                            Weight="16KG" />
+                        <model:Product
+                            Name="Mango"
+                            ImageSource="https://photos-elsoar.com/wp-content/images/Mango-Image-free-6.jpg"
+                            Price="270"
+                            Weight="11KG" />
+                    </x:Array>
+                </CollectionView.ItemsSource>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <VerticalStackLayout Spacing="8" WidthRequest="120">
+                            <Border StrokeShape="RoundRectangle 10">
+                                <VerticalStackLayout Padding="10" Spacing="6">
+                                    <Grid ColumnDefinitions="*, Auto">
+                                        <Border
+                                            Padding="5,1"
+                                            BackgroundColor="{StaticResource DarkBlue}"
+                                            HorizontalOptions="Start"
+                                            Opacity="0.5"
+                                            StrokeShape="RoundRectangle 10">
+                                            <Label
+                                                FontSize="10"
+                                                Style="{StaticResource WhiteLabel}"
+                                                Text="{Binding Weight}" />
+                                        </Border>
+                                        <Image Grid.Column="1" Source="heart_icon.svg" />
+                                    </Grid>
+                                    <Image
+                                        Aspect="AspectFill"
+                                        HeightRequest="90"
+                                        IsOpaque="True"
+                                        Source="{Binding ImageSource}" />
+                                </VerticalStackLayout>
+                            </Border>
+                            <Grid
+                                ColumnDefinitions="*, Auto"
+                                RowDefinitions="*, Auto"
+                                RowSpacing="5">
+                                <Label
+                                    Grid.ColumnSpan="2"
+                                    FontSize="10"
+                                    Style="{StaticResource GreyLabel}"
+                                    Text="{Binding Name}" />
+                                <Label
+                                    Grid.Row="1"
+                                    Grid.Column="0"
+                                    FontSize="12"
+                                    Style="{StaticResource DarkLabel}"
+                                    Text="{Binding Price, StringFormat='{0:C}'}"
+                                    VerticalOptions="Center" />
+                                <Button
+                                    Grid.Row="1"
+                                    Grid.Column="1"
+                                    Style="{StaticResource SelectButton}"
+                                    Text="Add" />
+                            </Grid>
+
+                        </VerticalStackLayout>
+
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

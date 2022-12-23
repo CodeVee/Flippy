@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Flippy.Views.ReviewPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Shell.BackgroundColor="White"
+    Shell.PresentationMode="ModalAnimated">
+    <VerticalStackLayout>
+        <Grid
+            Padding="16,0"
+            BackgroundColor="White"
+            HeightRequest="50">
+            <Label
+                FontSize="16"
+                HorizontalOptions="Center"
+                Style="{StaticResource DarkLabel}"
+                Text="Write a Review"
+                VerticalOptions="Center" />
+            <ImageButton
+                x:Name="CloseBtn"
+                Clicked="CloseBtn_Clicked"
+                HeightRequest="16"
+                HorizontalOptions="Start"
+                Source="arrow_back_dark.svg" />
+        </Grid>
+        <VerticalStackLayout
+            Margin="0,0,0,40"
+            Padding="0,30"
+            BackgroundColor="White">
+            <Border
+                HeightRequest="100"
+                StrokeShape="Ellipse"
+                WidthRequest="100">
+                <Image Aspect="AspectFill" Source="user_avatar.png" />
+            </Border>
+            <Label
+                Margin="0,12,0,7"
+                FontSize="14"
+                HorizontalOptions="Center"
+                Style="{StaticResource DarkLabel}"
+                Text="William P. Martinez" />
+            <HorizontalStackLayout HorizontalOptions="Center" Spacing="5">
+                <Image Source="star_full_icon.svg" WidthRequest="18" />
+                <Image Source="star_full_icon.svg" WidthRequest="18" />
+                <Image Source="star_full_icon.svg" WidthRequest="18" />
+                <Image Source="star_full_icon.svg" WidthRequest="18" />
+                <Image Source="star_empty_icon.svg" WidthRequest="18" />
+            </HorizontalStackLayout>
+
+            <VerticalStackLayout
+                Margin="0,30,0,0"
+                Padding="15,0"
+                Spacing="5">
+                <Border
+                    Padding="25,5"
+                    HeightRequest="100"
+                    Stroke="{StaticResource LightGrey}"
+                    StrokeShape="RoundRectangle 10"
+                    StrokeThickness="1">
+                    <Editor BackgroundColor="Transparent" Placeholder="Write your review" />
+                </Border>
+                <Label
+                    FontSize="10"
+                    HorizontalOptions="End"
+                    Style="{StaticResource GreyLabel}"
+                    Text="10 / 100 words" />
+            </VerticalStackLayout>
+            <Button
+                Margin="0,15"
+                Style="{StaticResource LightButton}"
+                Text="Post Review" />
+        </VerticalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>
